@@ -1,0 +1,235 @@
+/* ===============SCROLLBAR=============== */
+body::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+body::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: white;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #828282;
+}
+
+body::-webkit-scrollbar-thumb:active {
+    background: #404040;
+}
+
+body::-webkit-scrollbar-track {
+    background: #cc5656;
+}
+
+body::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+/* ===============TAG COMPONENTS=============== */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+
+nav {
+    z-index: 1;
+}
+
+nav::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: -100%;
+    left: 0;
+    background-image: url('./images/headbackgorund.png');
+    background-size: cover;
+    transition: .3s;
+}
+
+.navScrolled::before {
+    top: 0;
+    box-shadow: 0px 17px 42px -18px rgba(0, 0, 0, 0.75);
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+.activeNav {
+    font-weight: 1000;
+}
+
+
+/* STYLE COMPONENTS */
+.page {
+    width: 100%;
+    padding: 0 5rem;
+    border: 2px dashed #82828248;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+
+#navSelected {
+    font-weight: 700;
+    color: white !important;
+}
+
+
+/* ===============UNIQUE COMPONENTS=============== */
+
+
+/* HOME SECTION */
+#home {
+    height: 100vh;
+    position: relative;
+}
+
+#pizzaMain {
+    right: 2rem;
+    height: 43rem;
+}
+
+#mainText {
+    top: 10rem;
+}
+
+
+/* BUTTON THINGS */
+#orderButton:focus {
+    outline: 0;
+}
+
+#orderButton svg,
+#orderButton {
+    transition: .5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#orderButton:hover svg {
+    transform: translate(0.6rem)
+}
+
+
+#tomatoes {
+    position: relative;
+    left: -13rem;
+    bottom: -66%;
+    width: 36%;
+}
+
+
+/* ORDER SECTION */
+
+#order {
+    padding: 6rem 10rem;
+}
+
+.foodCard {
+    width: 100%;
+    height: 35rem;
+    background-color: #cf4c4c;
+    color: white;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.foodCard::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -50%;
+    background-color: #dae480;
+    transform: skewY(380deg);
+    transition: .3s;
+}
+
+.foodCard:hover::before {
+    top: -50%;
+    transform: skewY(350deg);
+}
+
+.foodCard::after {
+    font-family: "Patue One";
+    content: 'MILANO';
+    position: absolute;
+    bottom: 0.5rem;
+    left: 1rem;
+    font-size: 11rem;
+    font-weight: 1000;
+    color: #00000021;
+    line-height: 1;
+}
+
+/* IMAGE PART */
+.imgBX {
+    z-index: 1;
+}
+
+.foodCard .imgBX {
+    transition: .3s;
+}
+
+.foodCard:hover .imgBX {
+    padding-top: 1.5rem;
+}
+
+.foodCard .imgBX img {
+    width: 90%;
+    transition: .3s;
+}
+
+.foodCard:hover .imgBX img {
+    width: 70%;
+}
+
+/* CONTENT PART */
+.foodCard .contentBX {
+    z-index: 1;
+}
+
+.foodCard .contentBX button {
+    padding: 0.5rem;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.foodCard:hover .contentBX button {
+    opacity: 1;
+}
+
+
+
+
+/* ===============PAGES=============== */
+
+#aboutUs {
+    padding-top: 3rem;
+    height: 100vh;
+}
+
+#contactus {}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Milano's Pizzaria</title>
+        <meta name="description" content="This is a very Richard Website">
+        <link rel="icon" href="./images/logo.ico">
+        
+        <!-- GENERAL CSS -->
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="tailwind.css">
+
+        <!-- FONTS -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Patua+One">
+
+        <!-- MAP -->
+        <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+    </head>
+    <body>
+        <img src="images/background.svg" alt="" class="h-full absolute right-0">
+        <!-- =============NAVBAR============= -->
+        <nav class="grid grid-cols-3 w-full top-0 sticky py-6 px-16 z-10">
+            <!-- Logo -->
+            <div class="flex flex-row items-center col-span-2">
+                <a href="#home">
+                    <img class="w-auto h-12 mr-2" src="https://order.milanopizzeria.ca/images/milano/logo.png" alt="Logo">
+                </a>
+            </div>
+            <!-- LINKS -->
+            <div id="linkRow" class="flex flex-row justify-between items-center w-full col-span-1">
+                <a href="#" class="activeNav">Home</a>
+                <a href="#aboutUs">About Us</a>
+                <a href="#order">Order</a>
+                <a href="#contactus">Contact Us</a>
+            </div>
+        </nav>
+        <div id="app" class="mx-8">
+            <!-- =============CONTENT============= -->
+
+            <!-- HOME -->
+            <div id="home" class="page">
+                <img src="images/pizza_main.png" alt="An Image of a Pizza" class="absolute" id="pizzaMain">
+                <div id="mainText" class="absolute">
+                    <!-- TEXT -->
+                    <h1 class = "text-6xl font-extrabold mb-5 leading-tight">Ottawa's Best<br>Tasting Pizza</h1>
+                    <p class="ml-2 text-2xl">
+                        Ottawa's Local MILANO'S PIZZA; Fresh Ingredients, Fresh Pizza!<br> - Serving Barrhaven
+                    </p>
+                    <!-- BUTTON -->
+                    <button id="orderButton" class = "relative p-3 px-5 hover:pr-8 bg-red-400 hover:bg-red-600 rounded-full text-lg font-bold m-4 flex flex-row items-center">
+                        Order Now
+                        <svg class="w-6 h-6 ml-2 relative" style="top:0.1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </button>
+                </div>
+                <img src="./images/tomatoes.png" id="tomatoes" alt="Tomatoes and Spices">
+            </div>
+
+            <!-- ABOUT US -->
+            <div id="aboutUs" class="page" style="padding-top: 7rem;">
+                <div class="title">
+                    About us
+                </div>
+                <div id="map" class="w-full left-0" style="height:65vh;position:absolute !important"></div>
+                <!--                 
+                <iframe class="absolute w-full left-0" style="height:65vh;"
+                    src="https://api.maptiler.com/maps/ef1ce2ec-4124-4755-a912-bb054ccf9aa5/?key=b57rLPWWHae8xOlg0T3k#12.9/45.26926/-75.74453"></iframe> -->
+            </div>
+            
+            <!-- ORDER -->
+            <div id="order" class="page">
+                <div class="text-center mb-10">
+                    <div class="title">
+                        Order our Popular Dishes
+                    </div>
+                    <div>
+                        They are really good please do try them
+                    </div>
+
+                </div>
+                <div class="grid grid-cols-3 grid-row-3 col-gap-10">
+                    <food-card v-for="foodItem in foodItems" :title="foodItem.title" :description="foodItem.description"
+                    :imageURL="foodItem.imageURL" :price="foodItem.price"></food-card>
+                </div>
+            </div>
+
+            <!-- CONTACT US -->
+            <div id="contactus" class="page pt-12">
+                <div class="title">
+                    Contact us
+                </div>
+            </div>
+        </div>
+
+        <footer class="w-full bg-blue-900 p-4 text-white"> 
+            Nice footer
+        </footer>
+
+        <!-- FOOD CARD TEMPLATE -->
+        
+        <script type="text/x-template" id="food-card-template">
+            <div class="foodCard col-span-1 relative">
+                <div class="imgBX relative w-full flex justify-center items-center">
+                    <img src="./images/slice.png" alt="">
+                </div>
+                <div class = "contentBX relative pt-0 p-6 flex flex-col justify-center items-center">
+                    <h1 class="font-bold text-5xl">{{ title }}</h1>
+                    <h2 class="font-semibold text-xl">${{price}}</h2>
+                    <p class="font-medium text-lg text-center">{{ description }}</p>
+                    <button class="bg-red-700 border-white border-solid border-2 rounded-full px-22 p-14 mt-4 flex flex-row">
+                        More Info
+                        <svg class="ml-1 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </script>
+
+        <!-- SCRIPT -->
+        <script src="https://unpkg.com/vue"></script>
+        <script src="index.js"></script>
+        <script src="headerDropper.js"></script>
+
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoibHVjaWVuOTUwIiwiYSI6ImNrOHgycmcyeDBnM2wzZnJ6bzA3MmtlMncifQ.mPnllbNBrYFb5m3I0ZTxrw';
+            var pizzaLocation = [-75.724335, 45.284478];
+            var map = new mapboxgl.Map({
+                center: pizzaLocation,
+                zoom: 17,
+                container: 'map',
+                pitch: 40,
+                style: 'https://api.maptiler.com/maps/ef1ce2ec-4124-4755-a912-bb054ccf9aa5/style.json?key=b57rLPWWHae8xOlg0T3k'
+            });
+
+            // NAVIGATION CONTROL
+            var navCon = new mapboxgl.NavigationControl({
+                showCompass: true,
+                visualizePitch: true,
+                showZoom: false
+            });
+            map.addControl(navCon, 'top-left');
+
+
+            var pizzaMarker = new mapboxgl.Marker({
+                color: "#ca5353"
+            }).setLngLat(pizzaLocation)
+                .addTo(map)
+        </script>
+    </body>
+</html>
