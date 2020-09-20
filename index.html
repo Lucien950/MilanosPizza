@@ -14,6 +14,9 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Patua+One">
 
+        <!-- ICONS -->
+        <script src="https://kit.fontawesome.com/c5468a7a8b.js" crossorigin="anonymous"></script>
+        
         <!-- MAP -->
         <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
         <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
@@ -36,9 +39,9 @@
                 <a href="#contactus">Contact Us</a>
             </div>
         </nav>
+
         <div id="app" class="mx-8">
             <!-- =============CONTENT============= -->
-
             <!-- HOME -->
             <div id="home" class="page">
                 <img src="images/pizza_main.png" alt="An Image of a Pizza" class="absolute" id="pizzaMain">
@@ -65,9 +68,6 @@
                     About us
                 </div>
                 <div id="map" class="w-full left-0" style="height:65vh;position:absolute !important"></div>
-                <!--                 
-                <iframe class="absolute w-full left-0" style="height:65vh;"
-                    src="https://api.maptiler.com/maps/ef1ce2ec-4124-4755-a912-bb054ccf9aa5/?key=b57rLPWWHae8xOlg0T3k#12.9/45.26926/-75.74453"></iframe> -->
             </div>
             
             <!-- ORDER -->
@@ -93,14 +93,49 @@
                     Contact us
                 </div>
             </div>
+
+            <!-- FOOTER -->
+            <footer class=" absolute left-0 py-10 w-full bg-blue-900 p-4 text-white grid grid-cols-4 gap-4">
+                <footer-col>
+                    <img src="https://order.milanopizzeria.ca/images/milano/logo.png" class="mb-6" alt="Footer Logo">
+                    <div id="socialList" class="flex flex-row justify-around">
+                        <i class="fab fa-twitter-square"></i>
+                        <i class="fab fa-facebook-square"></i>
+                        <i class="fab fa-instagram-square"></i>
+                        <i class="fab fa-google-plus-square"></i>
+                        <i class="fab fa-yelp"></i>
+                    </div>
+                </footer-col>
+                <footer-col>
+                    Pages
+                    <ul>
+                        <li></li>
+                    </ul>
+                </footer-col>
+                <footer-col>
+                    Legal
+                    <ul>
+                        <li>Privacy Policy</li>
+                        <li>Terms and Conditions</li>
+                        <li>FAQ</li>
+                    </ul>
+                </footer-col>
+                <footer-col>
+                    Place your order Today
+                    <div>
+                        Phone
+                    </div>
+                    <div>
+                        Address
+                    </div>
+                    <div>
+                        Order Now Here...
+                    </div>
+                </footer-col>
+            </footer>
         </div>
 
-        <footer class="w-full bg-blue-900 p-4 text-white"> 
-            Nice footer
-        </footer>
-
         <!-- FOOD CARD TEMPLATE -->
-        
         <script type="text/x-template" id="food-card-template">
             <div class="foodCard col-span-1 relative">
                 <div class="imgBX relative w-full flex justify-center items-center">
@@ -117,12 +152,20 @@
                 </div>
             </div>
         </script>
-
+        
+        <!-- FOOTER COL -->
+        <script type="text/x-template" id="footer-col-template">
+            <div id="footer-col" class="col-span-1">
+                <slot></slot>
+            </div>
+        </script>
+        
         <!-- SCRIPT -->
         <script src="https://unpkg.com/vue"></script>
         <script src="index.js"></script>
         <script src="headerDropper.js"></script>
 
+        <!-- MAP -->
         <script>
             mapboxgl.accessToken = 'pk.eyJ1IjoibHVjaWVuOTUwIiwiYSI6ImNrOHgycmcyeDBnM2wzZnJ6bzA3MmtlMncifQ.mPnllbNBrYFb5m3I0ZTxrw';
             var pizzaLocation = [-75.724335, 45.284478];

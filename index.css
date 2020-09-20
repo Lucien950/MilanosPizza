@@ -223,7 +223,15 @@ nav a {
 }
 
 
+/* FOOTERS */
+#footer-col {
+    border: 2px dashed #82828248;
+}
 
+#socialList i {
+    width: min-content;
+    font-size: 3rem;
+}
 
 /* ===============PAGES=============== */
 

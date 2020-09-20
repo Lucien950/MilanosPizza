@@ -2,6 +2,9 @@ Vue.component('food-card', {
     template: "#food-card-template",
     props: ['imageURL', 'title', 'price', 'description']
 })
+Vue.component('footer-col', {
+    template: "#footer-col-template"
+})
 
 mainApp = new Vue({
     el: "#app",
