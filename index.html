@@ -5,6 +5,7 @@
         <title>Milano's Pizzaria</title>
         <meta name="description" content="This is a very Richard Website">
         <link rel="icon" href="./images/logo.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <!-- GENERAL CSS -->
         <link rel="stylesheet" href="index.css">
@@ -99,17 +100,17 @@
                 <footer-col>
                     <img src="https://order.milanopizzeria.ca/images/milano/logo.png" class="mb-6" alt="Footer Logo">
                     <div id="socialList" class="flex flex-row justify-around">
-                        <i class="fab fa-twitter-square"></i>
-                        <i class="fab fa-facebook-square"></i>
-                        <i class="fab fa-instagram-square"></i>
-                        <i class="fab fa-google-plus-square"></i>
-                        <i class="fab fa-yelp"></i>
+                        <social-icon v-for="socialItem in socialItems" :class="socialItem.idClass" :url="socialItem.url"></social-icon>
                     </div>
                 </footer-col>
                 <footer-col>
                     Pages
                     <ul>
-                        <li></li>
+                        <li>Home</li>
+                        <li>Menu</li>
+                        <li>Contact Us</li>
+                        <li>Create Account</li>
+                        <li>Sign in</li>
                     </ul>
                 </footer-col>
                 <footer-col>
@@ -159,7 +160,11 @@
                 <slot></slot>
             </div>
         </script>
-        
+        <!-- SOCIAL ICONS -->
+        <script type="text/x-template" id="social-icon-template">
+            <i class="fab" :onclick="`openInNewTab('${url}')`"></i>
+        </script>
+
         <!-- SCRIPT -->
         <script src="https://unpkg.com/vue"></script>
         <script src="index.js"></script>
