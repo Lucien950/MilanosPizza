@@ -99,6 +99,17 @@ nav a {
     color: white !important;
 }
 
+.avatar {
+    clip-path: circle(50.0% at 50% 50%);
+    width: 20%;
+    height: auto;
+}
+
+.starRack {
+    color: #f3ea6a;
+    letter-spacing: normal;
+}
+
 
 /* ===============UNIQUE COMPONENTS=============== */
 
@@ -238,7 +249,11 @@ nav a {
 
 #aboutUs {
     padding-top: 3rem;
-    height: 100vh;
+    background-image: url("https://themillions.com/wp-content/uploads/2019/03/david-jorre-712468-unsplash.jpg");
 }
 
 #contactus {}
+
+#reviews {
+    height: 100vh;
+}
