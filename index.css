@@ -1,4 +1,19 @@
-/* ===============SCROLLBAR=============== */
+/* ===============TAG COMPONENTS=============== */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+/* #region ===============SCROLLBAR=============== */
 body::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -29,22 +44,22 @@ body::-webkit-scrollbar-corner {
     background: transparent;
 }
 
-/* ===============TAG COMPONENTS=============== */
-* {
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins";
+/* #endregion */
+
+.page {
+    width: 100%;
+    padding: 0 5rem;
 }
 
-html {
-    scroll-behavior: smooth;
+.title {
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
 }
 
-body {
-    background-color: #f9f9f9;
-}
 
-
+/* #region  NAVBAR */
 nav {
     z-index: 1;
 }
@@ -69,52 +84,35 @@ nav::before {
 
 nav a {
     text-decoration: none;
-    color: white;
+    color: rgba(255, 255, 255, 0.705);
     font-weight: 400;
     font-size: 1.3rem;
+    transition: all .5s;
 }
 
 .activeNav {
-    font-weight: 1000;
+    --sizer: .3px;
+    --inverseSizer: -.3px;
+    --colorer: white;
+    text-shadow:
+        var(--inverseSizer) var(--inverseSizer) 0 var(--colorer),
+        var(--sizer) var(--inverseSizer) 0 var(--colorer),
+        var(--inverseSizer) var(--sizer) 0 var(--colorer),
+        var(--sizer) var(--sizer) 0 var(--colorer);
 }
-
-
-/* STYLE COMPONENTS */
-.page {
-    width: 100%;
-    padding: 0 5rem;
-    border: 2px dashed #82828248;
-}
-
-.title {
-    text-align: center;
-    font-size: 2.25rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-}
-
 
 #navSelected {
     font-weight: 700;
     color: white !important;
 }
 
-.avatar {
-    clip-path: circle(50.0% at 50% 50%);
-    width: 20%;
-    height: auto;
-}
-
-.starRack {
-    color: #f3ea6a;
-    letter-spacing: normal;
-}
+/* #endregion */
 
 
-/* ===============UNIQUE COMPONENTS=============== */
+/* ===============PAGES=============== */
 
 
-/* HOME SECTION */
+/* #region  HOME SECTION */
 #home {
     height: 100vh;
     position: relative;
@@ -152,9 +150,39 @@ nav a {
     width: 36%;
 }
 
+/* #endregion */
 
-/* ORDER SECTION */
 
+/* #region  About Us */
+#aboutUs {
+    margin-top: 7rem;
+}
+
+.imgGallery {
+    height: 40vh;
+}
+
+.imgGallery img {
+    transition: .6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.imgGallery img:hover {
+    transform: scale(1.2);
+}
+
+#contentGrid {
+    margin-bottom: 3rem;
+}
+
+#contentGrid h1 {
+    font-size: 1.875rem;
+    margin-bottom: 1.25rem;
+}
+
+/* #endregion */
+
+
+/* #region  ORDER SELECTION */
 #order {
     padding: 6rem 10rem;
 }
@@ -233,11 +261,30 @@ nav a {
     opacity: 1;
 }
 
+/* #endregion */
 
-/* FOOTERS */
-#footer-col {
-    border: 2px dashed #82828248;
+
+/* #region  REVIEWS */
+#reviews {
+    height: 100vh;
 }
+
+.starRack {
+    color: #f3ea6a;
+    letter-spacing: normal;
+}
+
+.avatar {
+    clip-path: circle(50.0% at 50% 50%);
+    width: 20%;
+    height: auto;
+}
+
+/* #endregion */
+
+
+/* #region  FOOTERS */
+#footer-col {}
 
 #socialList i {
     width: min-content;
@@ -245,15 +292,10 @@ nav a {
     cursor: pointer;
 }
 
-/* ===============PAGES=============== */
+/* #endregion */
 
-#aboutUs {
-    padding-top: 3rem;
-    background-image: url("https://themillions.com/wp-content/uploads/2019/03/david-jorre-712468-unsplash.jpg");
-}
 
-#contactus {}
-
-#reviews {
+/* ===============MISC PAGES=============== */
+#contactus {
     height: 100vh;
 }
