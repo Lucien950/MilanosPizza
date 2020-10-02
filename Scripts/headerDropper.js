@@ -1,7 +1,5 @@
 const anchors = document.querySelectorAll("#linkRow a");
 const pages = document.querySelectorAll(".page");
-console.log("anchors", anchors);
-console.log("pages", pages);
 
 const pageObserver = new IntersectionObserver(
     (entries, pageObserver)=>{
@@ -24,7 +22,6 @@ const pageObserver = new IntersectionObserver(
 )
 pages.forEach(page => {
     pageObserver.observe(page);
-    console.log(page, "is being observed")
 })
 
 

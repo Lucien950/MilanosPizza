@@ -12,101 +12,15 @@ Vue.component('social-icon', {
 })
 Vue.component('review-card', {
     template: "#review-card-template",
-    props: ['stars', 'imageurl', 'review']
+    props: ['stars', 'image-url', 'review']
 })
 
-const bill = "../images/bill.jpg"
+// GET JSON FILE FOR VUE DATA
+var request = new XMLHttpRequest();
+request.open("GET", "../JSON/vueData.json", false);
+request.send(null);
+var vueData = JSON.parse(request.responseText);
 
-var vueData = {
-    foodItems: [
-        {
-            imageURL: '../images/slice.png',
-            title: 'Pizza',
-            price: '$40.99',
-            description: 'Some delicious pizza to eat'
-        },
-        {
-            imageURL: '../images/slice.png',
-            title: 'Other Food',
-            price: '$32.42',
-            description: 'This is also very good'
-        },
-        {
-            imageURL: '../images/salad.png',
-            title: 'Vegan Menu',
-            price: 'Price Varies',
-            description: 'For Vegan people'
-        }
-    ],
-    socialItems: [
-        {
-            idClass: "fa-twitter-square",
-            url: "https://twitter.com/milanopizza1"
-        },
-        {
-            idClass: "fa-facebook-square",
-            url: "https://www.facebook.com/MilanoPizzeriaBarrhaven/"
-        },
-        {
-            idClass: "fa-instagram-square",
-            url: "https://www.instagram.com/milanopizza1/"
-        },
-        {
-            idClass: "fa-google-plus-square",
-            url: "https://plus.google.com/113931051887402511809"
-        },
-        {
-            idClass: "fa-yelp",
-            url: "https://www.yelp.ca/biz/milano-pizzeria-nepean"
-        },
-    ],
-    reviews: [
-        {
-            'stars': 5,
-            'imageurl': bill,
-            'review': "This was a very ok pizza I really oked with it could do with more parmesean because I am a freak"
-        },
-        {
-            'stars': 4,
-            'imageurl': bill,
-            'review': "This was a very ok pizza I really oked with it could do with more parmesean because I am a freak"
-        },
-        {
-            'stars': 5,
-            'imageurl': bill,
-            'review': "This was a very ok pizza I really oked with it could do with more parmesean because I am a freak"
-        },
-        {
-            'stars': 5,
-            'imageurl': bill,
-            'review': "This was a very ok pizza I really oked with it could do with more parmesean because I am a freak"
-        },
-        {
-            'stars': 5,
-            'imageurl': bill,
-            'review': "This was a very ok pizza I really oked with it could do with more parmesean because I am a freak"
-        },
-        {
-            'stars': 5,
-            'imageurl': bill,
-            'review': "This was a very ok pizza I really oked with it could do with more parmesean because I am a freak"
-        }
-    ],
-    aboutUsImages: [
-        {
-            'imageURL': 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg',
-            'alt': 'tree'
-        },
-        {
-            'imageURL': 'https://www.w3schools.com/w3css/img_lights.jpg',
-            'alt': 'Lights'
-        },
-        {
-            'imageURL': '../images/test image.jpg',
-            'alt': 'Sunny'
-        }
-    ]
-}
 
 mainApp = new Vue({
     el: "#app",
@@ -170,7 +84,7 @@ reviewBoxes.forEach((review, i) => {
     
 });
 
-
+// PARALAX
 const imagery = document.querySelector("#imagery");
 window.addEventListener("scroll",
     ()=>{
