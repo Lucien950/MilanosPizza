@@ -15,22 +15,21 @@
         <link rel="stylesheet" href="tailwind.css">
         <link rel="stylesheet" href="debug.css">
 
-        <!-- FONTS -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Patua+One">
-
         <!-- ICONS -->
-        <script src="https://kit.fontawesome.com/c5468a7a8b.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/c5468a7a8b.js" crossorigin="anonymous" async></script>
         
         <!-- MAP -->
-        <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+        <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js' async></script>
         <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
     </head>
     
     <body>
-        <img src="images/background.svg" alt="" id="imagery" class="fixed h-full right-0" style="z-index:-1;">
+        <img src="images/background.svg" alt="Background Styling" id="imagery" class="fixed w-full right-0" style="z-index:-1;">
         <!-- =============NAVBAR============= -->
-        <nav class="grid grid-cols-5 w-full top-0 sticky py-6 px-16 z-10">
+        <nav class="grid grid-cols-5 w-full top-0 sticky py-5 px-16 z-10">
+            <div id="backgroundImage" class="w-full h-full">
+                <img src="./images/headbackgorund.png" class="w-full" alt="Header Background Image">
+            </div>
             <!-- Logo -->
             <div class="flex flex-row items-center col-span-3">
                 <a href="#home">
@@ -48,11 +47,10 @@
         </nav>
         
         
-        
         <div id="app" class="mx-8">
             <!-- =============CONTENT============= -->
             <!-- HOME -->
-            <div id="home" class="page mt-10">
+            <div id="home" class="page mt-6">
                 <img src="images/pizza_main.png" alt="An Image of a Pizza" class="absolute" id="pizzaMain">
                 <div id="mainText" class="absolute">
                     <!-- TEXT -->
@@ -114,7 +112,7 @@
                     
 
                     <div class="col-span-3 overflow-hidden" style="height:40vh">
-                        <img src="https://external-preview.redd.it/RipNXjaPIK2xoX_2_ZnIW-XTOyQ1EeS25buf9F0mLG4.jpg?auto=webp&s=954ba7126374ab9591855f17ec0ddb5520e56728" alt="Pizza Making Process, Illustrated">
+                        <img src="./images/dice.png" alt="Pizza Making Process, Illustrated">
                     </div>
                     <div class="col-span-3 text-right">
                         <h1>How we do it</h1>
@@ -181,7 +179,7 @@
                     </div>
 
                 </div>
-                <div class="grid grid-cols-3 grid-row-3 col-gap-10">
+                <div class="grid grid-cols-3 grid-row-3 gap-10">
                     <food-card v-for="foodItem in foodItems" :title="foodItem.title" :description="foodItem.description" :image-url="foodItem.imageURL" :price="foodItem.price"></food-card>
                 </div>
             </div>
@@ -191,6 +189,15 @@
                 <div class="title">
                     Contact us
                 </div>
+                <div class="grid grid-cols-3 gap-2" style='height:80vh'>
+                    <div class="h-full socialScroll overflow-scroll overflow-x-hidden rounded-sm">
+                        <a class="twitter-timeline" data-lang="en" data-theme="dark"
+                            href="https://twitter.com/milanopizza1?ref_src=twsrc%5Etfw">Tweets by milanopizza1</a>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
+                    <div class="h-full bg-gray-600"></div>
+                    <div class="h-full bg-gray-800"></div>
+                </div>
             </div>
 
             <!-- REVIEWS -->
@@ -198,11 +205,13 @@
                 <div class="title">
                     Reviews
                 </div>
-                <review-card v-for="review in reviews" :stars="review.stars" :imageurl="review.imageurl" :review="review.review"></review-card>
+                <div class="relative">
+                    <review-card v-for="review in reviews" :stars="review.stars" :imageurl="review.imageurl" :review="review.review"></review-card>
+                </div>
             </div>
 
             <!-- FOOTER -->
-            <footer class=" absolute left-0 py-10 w-full bg-blue-900 p-4 text-white grid grid-cols-4 gap-4">
+            <footer class=" absolute left-0 py-8 px-32 w-full text-black grid grid-cols-4 gap-4">
                 <footer-col>
                     <img src="https://order.milanopizzeria.ca/images/milano/logo.png" class="mb-6" alt="Footer Logo">
                     <div id="socialList" class="flex flex-row justify-around">
@@ -243,7 +252,6 @@
         </div>
 
 
-
         <!-- FOOD CARD TEMPLATE -->
         <script type="text/x-template" id="food-card-template">
             <div class="foodCard col-span-1 relative">
@@ -275,7 +283,7 @@
 
         <!-- Review Card -->
         <script type="text/x-template" id="review-card-template">
-            <div class="reviewBox bg-white absolute flex flex-col items-center w-1/3 p-6 rounded-xl shadow-2xl">
+            <div class="reviewBox bg-white absolute flex flex-col items-center w-4/12 p-4 py-6 rounded-lg shadow-xl">
                 <img class="avatar mb-4" :src="`${imageurl}`">
                 <p class="text-center mb-2">{{ review }}</p>
                 <div class="starRack">

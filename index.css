@@ -64,21 +64,22 @@ nav {
     z-index: 1;
 }
 
-nav::before {
-    content: '';
+#backgroundImage {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
     top: -100%;
     left: 0;
-    background-image: url('./images/headbackgorund.png');
-    background-size: cover;
     transition: .3s;
+    overflow: hidden;
+    z-index: -1;
 }
 
-.navScrolled::before {
-    top: 0;
+#backgroundImage img {
+    filter: blur(2px);
+    transform: scale(1.07);
+}
+
+.navScrolled {
+    top: 0 !important;
     box-shadow: 0px 17px 42px -18px rgba(0, 0, 0, 0.75);
 }
 
@@ -92,7 +93,7 @@ nav a {
 
 .activeNav {
     --sizer: .3px;
-    --inverseSizer: -.3px;
+    --inverseSizer: calc(var(--sizer) * -1);
     --colorer: white;
     text-shadow:
         var(--inverseSizer) var(--inverseSizer) 0 var(--colorer),
@@ -263,10 +264,58 @@ nav a {
 
 /* #endregion */
 
+/* #region  Contact Us  */
+#contactus {}
+
+.socialScroll::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+}
+
+.socialScroll::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+
+.socialScroll::-webkit-scrollbar-thumb {
+    background: #e1e1e1;
+    border: 0px none red;
+    border-radius: 4px;
+}
+
+.socialScroll::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+
+.socialScroll::-webkit-scrollbar-thumb:active {
+    background: #949494;
+}
+
+.socialScroll::-webkit-scrollbar-track {
+    background: #292f33;
+    border: 0px none red;
+    border-radius: 4px;
+    padding-right: 10px;
+}
+
+.socialScroll::-webkit-scrollbar-track:hover {
+    background: #292f33;
+}
+
+.socialScroll::-webkit-scrollbar-track:active {
+    background: #1f2023;
+}
+
+.socialScroll::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+/* #endregion */
+
 
 /* #region  REVIEWS */
 #reviews {
-    height: 100vh;
+    height: 115vh;
 }
 
 .starRack {
@@ -279,6 +328,12 @@ nav a {
     width: 20%;
     height: auto;
 }
+.reviewBox{
+    transition: .3s ease;
+}
+.reviewBox:hover{
+    transform: scale(1.04);
+}
 
 /* #endregion */
 
@@ -288,14 +343,8 @@ nav a {
 
 #socialList i {
     width: min-content;
-    font-size: 3rem;
+    font-size: 2.5rem;
     cursor: pointer;
 }
 
 /* #endregion */
-
-
-/* ===============MISC PAGES=============== */
-#contactus {
-    height: 100vh;
-}

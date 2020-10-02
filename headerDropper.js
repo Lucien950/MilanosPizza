@@ -29,7 +29,7 @@ pages.forEach(page => {
 
 
 // HEADER
-const header = document.querySelector("nav");
+const header = document.querySelector("#backgroundImage");
 const headerObserver = new IntersectionObserver(
     //MAIN FUNCTION
     function (entries, headerObserver) {
