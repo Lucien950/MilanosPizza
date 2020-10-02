@@ -15,24 +15,24 @@ Vue.component('review-card', {
     props: ['stars', 'imageurl', 'review']
 })
 
-const bill = "./images/bill.jpg"
+const bill = "../images/bill.jpg"
 
 var vueData = {
     foodItems: [
         {
-            imageURL: './images/slice.png',
+            imageURL: '../images/slice.png',
             title: 'Pizza',
             price: '$40.99',
             description: 'Some delicious pizza to eat'
         },
         {
-            imageURL: './images/slice.png',
+            imageURL: '../images/slice.png',
             title: 'Other Food',
             price: '$32.42',
             description: 'This is also very good'
         },
         {
-            imageURL: './images/salad.png',
+            imageURL: '../images/salad.png',
             title: 'Vegan Menu',
             price: 'Price Varies',
             description: 'For Vegan people'
@@ -102,7 +102,7 @@ var vueData = {
             'alt': 'Lights'
         },
         {
-            'imageURL': './images/test image.jpg',
+            'imageURL': '../images/test image.jpg',
             'alt': 'Sunny'
         }
     ]
