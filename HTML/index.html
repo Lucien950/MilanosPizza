@@ -4,12 +4,12 @@
         <title>Milano's Pizzaria</title>
         <meta name="description" content="This is a very Richard Website">
         <link rel="icon" href="../images/logo.ico">
-        
+
         <!-- PEDANTIC, BUT "NECESSARY" -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        
+
         <!-- GENERAL CSS -->
         <link rel="stylesheet" href="../CSS/index.css">
         <link rel="stylesheet" href="../CSS/tailwind.css">
@@ -17,14 +17,14 @@
 
         <!-- ICONS -->
         <script src="https://kit.fontawesome.com/c5468a7a8b.js" crossorigin="anonymous" async></script>
-        
+
         <!-- MAP -->
         <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js' async></script>
         <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
     </head>
-    
     <body>
-        <img src="../images/background.svg" alt="Background Styling" id="imagery" class="fixed w-full right-0" style="z-index:-1;">
+        <img src="../images/background.svg" alt="Background Styling" id="imagery" class="fixed w-full right-0"
+            style="z-index:-1;">
         <!-- =============NAVBAR============= -->
         <nav class="grid grid-cols-5 w-full top-0 sticky py-5 px-16 z-10">
             <div id="backgroundImage" class="w-full h-full">
@@ -45,8 +45,7 @@
                 <a href="#reviews">Reviews</a>
             </div>
         </nav>
-        
-        
+
         <div id="app" class="mx-8">
             <!-- =============CONTENT============= -->
             <!-- HOME -->
@@ -54,15 +53,19 @@
                 <img src="../images/pizza_main.png" alt="An Image of a Pizza" class="absolute" id="pizzaMain">
                 <div id="mainText" class="absolute">
                     <!-- TEXT -->
-                    <h1 class = "text-6xl font-extrabold mb-5 leading-tight">Ottawa's Best<br>Tasting Pizza</h1>
+                    <h1 class="text-6xl font-extrabold mb-5 leading-tight">Ottawa's Best<br>Tasting Pizza</h1>
                     <p class="ml-2 text-2xl">
                         Ottawa's Local MILANO'S PIZZA; Fresh Ingredients, Fresh Pizza!<br> - Serving Barrhaven
                     </p>
                     <!-- BUTTON -->
-                    <button id="orderButton" class = "relative p-3 px-5 hover:pr-8 bg-red-500 hover:bg-red-700 text-white rounded-full text-lg font-bold m-4 flex flex-row items-center" onclick="document.getElementById('order').scrollIntoView();">
-                    Our Menu
-                    <svg class="w-6 h-6 ml-2 relative" style="top:0.1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    <button id="orderButton"
+                        class="relative p-3 px-5 hover:pr-8 bg-red-500 hover:bg-red-700 text-white rounded-full text-lg font-bold m-4 flex flex-row items-center"
+                        onclick="document.getElementById('order').scrollIntoView();">
+                        Our Menu
+                        <svg class="w-6 h-6 ml-2 relative" style="top:0.1rem;" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                         </svg>
                     </button>
                 </div>
@@ -77,30 +80,37 @@
                 <!-- CONTENT GRID -->
                 <div id='contentGrid' class="grid grid-cols-6 gap-y-10 gap-x-5">
                     <!-- WHO WE ARE + VIDEO -->
-                    <div class="col-span-3 p-6 pl-0">
+                    <div class="col-span-3 p-6 pl-0 text-right">
                         <h1>Who We Are</h1>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sollicitudin non eros semper semper. Aliquam
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sollicitudin non eros semper
+                            semper. Aliquam
                             tincidunt
-                            luctus risus vel sodales. Donec sed urna sodales euismod semper ac vitae dolor. Nunc consequat urna justo, at
+                            luctus risus vel sodales. Donec sed urna sodales euismod semper ac vitae dolor. Nunc consequat
+                            urna justo, at
                             efficitur
-                            metus malesuada eget. Aliquam tempor, ligula id consequat vulputate, arcu dolor tristique nulla, ac tincidunt mauris
+                            metus malesuada eget. Aliquam tempor, ligula id consequat vulputate, arcu dolor tristique nulla,
+                            ac tincidunt mauris
                             erat non sapien. Vivamus mattis ornare map tortor,dignissim eget.
                         </p>
                     </div>
                     <div class="col-span-3 relative h-0 w-full" style="padding-bottom: 56.25%;">
-                        <iframe class="w-full h-full absolute left-0 top-0" src="https://www.youtube.com/embed/YLN1Argi7ik" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+                        <iframe class="w-full h-full absolute left-0 top-0" src="https://www.youtube.com/embed/YLN1Argi7ik"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </div>
 
                     <!-- OUR GOALS -->
-                    <div class="col-span-6">
+                    <div class="col-span-6 ">
                         <h1 class="text-center">Our Goals</h1>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sollicitudin non eros semper semper. Aliquam tincidunt
-                            luctus risus vel sodales. Donec sed urna sodales euismod semper ac vitae dolor. Nunc consequat urna justo, at efficitur
-                            metus malesuada eget. Aliquam tempor, ligula id consequat vulputate, arcu dolor tristique nulla, ac tincidunt mauris
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sollicitudin non eros semper
+                            semper. Aliquam tincidunt
+                            luctus risus vel sodales. Donec sed urna sodales euismod semper ac vitae dolor. Nunc consequat
+                            urna justo, at efficitur
+                            metus malesuada eget. Aliquam tempor, ligula id consequat vulputate, arcu dolor tristique nulla,
+                            ac tincidunt mauris
                             erat non sapien. Vivamus mattis ornare map tortor,dignissim eget.
                         </p>
                     </div>
@@ -109,26 +119,30 @@
                     <div class="col-span-2 overflow-hidden imgGallery" v-for="image in aboutUsImages">
                         <img class="h-full w-auto" :src="`${image.imageURL}`" :alt="`${image.alt}`">
                     </div>
-                    
+
 
                     <div class="col-span-3 overflow-hidden" style="height:40vh">
                         <img src="../images/dice.png" alt="Pizza Making Process, Illustrated">
                     </div>
-                    <div class="col-span-3 text-right">
+                    <div class="col-span-3">
                         <h1>How we do it</h1>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sollicitudin non eros semper semper. Aliquam tincidunt
-                            luctus risus vel sodales. Donec sed urna sodales euismod semper ac vitae dolor. Nunc consequat urna justo, at efficitur
-                            metus malesuada eget. Aliquam tempor, ligula id consequat vulputate, arcu dolor tristique nulla, ac tincidunt mauris
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sollicitudin non eros semper
+                            semper. Aliquam tincidunt
+                            luctus risus vel sodales. Donec sed urna sodales euismod semper ac vitae dolor. Nunc consequat
+                            urna justo, at efficitur
+                            metus malesuada eget. Aliquam tempor, ligula id consequat vulputate, arcu dolor tristique nulla,
+                            ac tincidunt mauris
                             erat non sapien. Vivamus mattis ornare map tortor,dignissim
                         </p>
                     </div>
 
                     <!-- COMMUNITY INVOLVEMENT -->
-                    <div class="col-span-3">
+                    <div class="col-span-3 text-right">
                         <h1>Community Invovlement</h1>
                         <p>
-                            orem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam idjhbdbwdkbbdjbdjkdbkjbdjkbdjbdkabdbdkabdkwadbajkdbjdbaj
+                            orem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                            idjhbdbwdkbbdjbdjkdbkjbdjkbdjbdkabdbdkabdkwadbajkdbjdbaj
                             >image>
                             Bwahdbkhbadbdbawdbjabdkawbdbdkjadbadbjkadbjkdbjkdbw
                             Bwabdhjwbdabdbdjhbdwajhbdajbdbdjbwjbawjdhwbabdbahvdh
@@ -145,7 +159,7 @@
                     <div class="col-span-3">
                         <img src="" alt="Schools Image">
                     </div>
-                    <div class="col-span-3 text-right">
+                    <div class="col-span-3">
                         <h1>Milano at School</h1>
                         <p>
                             orem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
@@ -157,7 +171,7 @@
                             Wasdwasdwasdwasdwasdasdjaoihiudhwahdjfgagdgakhcakss
                             Iagdiagugdiuahgydaejaiojopjapdojapodjaopdjapojdawuygdsss
                         </p>
-                    </div> 
+                    </div>
                 </div>
 
                 <!-- FIND OUR LOCATIONS -->
@@ -167,7 +181,7 @@
                     <div style="height:65vh"></div>
                 </div>
             </div>
-            
+
             <!-- ORDER -->
             <div id="order" class="page">
                 <div class="text-center mb-10">
@@ -180,7 +194,8 @@
 
                 </div>
                 <div class="grid grid-cols-3 grid-row-3 gap-10">
-                    <food-card v-for="foodItem in foodItems" :title="foodItem.title" :description="foodItem.description" :image-url="foodItem.imageURL" :price="foodItem.price"></food-card>
+                    <food-card v-for="foodItem in foodItems" :title="foodItem.title" :description="foodItem.description"
+                        :image-url="foodItem.imageURL" :price="foodItem.price"></food-card>
                 </div>
             </div>
 
@@ -190,13 +205,12 @@
                     Contact us
                 </div>
                 <div class="grid grid-cols-3 gap-2" style='height:80vh'>
-                    <div class="h-full socialScroll overflow-scroll overflow-x-hidden rounded-sm">
+                    <div class="h-full socialScroll overflow-scroll overflow-x-hidden rounded-lg">
                         <a class="twitter-timeline" data-lang="en" data-theme="dark"
                             href="https://twitter.com/milanopizza1?ref_src=twsrc%5Etfw">Tweets by milanopizza1</a>
-                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                     <div class="h-full bg-gray-600"></div>
-                    <div class="h-full bg-gray-800"></div>
+                    <div class="h-full bg-gray-800" id='mapContact'></div>
                 </div>
             </div>
 
@@ -206,7 +220,8 @@
                     Reviews
                 </div>
                 <div class="relative">
-                    <review-card v-for="review in reviews" :stars="review.stars" :image-url="review.imageURL" :review="review.review"></review-card>
+                    <review-card v-for="review in reviews" :stars="review.stars" :image-url="review.imageURL"
+                        :review="review.review"></review-card>
                 </div>
             </div>
 
@@ -215,7 +230,8 @@
                 <footer-col>
                     <img src="https://order.milanopizzeria.ca/images/milano/logo.png" class="mb-6" alt="Footer Logo">
                     <div id="socialList" class="flex flex-row justify-around">
-                        <social-icon v-for="socialItem in socialItems" :class="socialItem.idClass" :url="socialItem.url"></social-icon>
+                        <social-icon v-for="socialItem in socialItems" :class="socialItem.idClass" :url="socialItem.url">
+                        </social-icon>
                     </div>
                 </footer-col>
                 <footer-col>
@@ -251,78 +267,183 @@
             </footer>
         </div>
 
-
+        <!-- #region Templates -->
         <!-- FOOD CARD TEMPLATE -->
         <script type="text/x-template" id="food-card-template">
-            <div class="foodCard col-span-1 relative">
-                <div class="imgBX relative w-full flex justify-center items-center">
-                    <img :src="`${imageUrl}`" :alt="`${title} image`">
+                <div class="foodCard col-span-1 relative">
+                    <div class="imgBX relative w-full flex justify-center items-center">
+                        <img :src="`${imageUrl}`" :alt="`${title} image`">
+                    </div>
+                    <div class = "contentBX relative pt-0 p-6 flex flex-col justify-center items-center">
+                        <h1 class="font-bold text-5xl">{{ title }}</h1>
+                        <h2 class="font-semibold text-xl">{{ price }}</h2>
+                        <p class="font-medium text-lg text-center">{{ description }}</p>
+                        <button class="bg-red-700 border-white border-solid border-2 rounded-full px-22 p-14 mt-4 flex flex-row">
+                            More Info
+                            <svg class="ml-1 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </button>
+                    </div>
                 </div>
-                <div class = "contentBX relative pt-0 p-6 flex flex-col justify-center items-center">
-                    <h1 class="font-bold text-5xl">{{ title }}</h1>
-                    <h2 class="font-semibold text-xl">{{ price }}</h2>
-                    <p class="font-medium text-lg text-center">{{ description }}</p>
-                    <button class="bg-red-700 border-white border-solid border-2 rounded-full px-22 p-14 mt-4 flex flex-row">
-                        More Info
-                        <svg class="ml-1 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </button>
-                </div>
-            </div>
-        </script>
-        
+            </script>
+
         <!-- FOOTER COL -->
         <script type="text/x-template" id="footer-col-template">
-            <div id="footer-col" class="col-span-1">
-                <slot></slot>
-            </div>
-        </script>
+                <div id="footer-col" class="col-span-1">
+                    <slot></slot>
+                </div>
+            </script>
         <!-- SOCIAL ICONS -->
         <script type="text/x-template" id="social-icon-template">
-            <i class="fab" :onclick="`openInNewTab('${url}')`"></i>
-        </script>
+                <i class="fab" :onclick="`openInNewTab('${url}')`"></i>
+            </script>
 
         <!-- Review Card -->
         <script type="text/x-template" id="review-card-template">
-            <div class="reviewBox bg-white absolute flex flex-col items-center w-4/12 p-4 py-6 rounded-lg shadow-xl">
-                <img class="avatar mb-4" :src="`${imageUrl}`">
-                <p class="text-center mb-2">{{ review }}</p>
-                <div class="starRack">
-                    <i v-for="starNum in stars" class="fas fa-star"></i>
-                    <i v-for="starNum in (5-stars)" class="far fa-star"></i>
+                <div class="reviewBox bg-white absolute flex flex-col items-center w-4/12 p-4 py-6 rounded-lg shadow-xl">
+                    <img class="avatar mb-4" :src="`${imageUrl}`">
+                    <p class="text-center mb-2">{{ review }}</p>
+                    <div class="starRack">
+                        <i v-for="starNum in stars" class="fas fa-star"></i>
+                        <i v-for="starNum in (5-stars)" class="far fa-star"></i>
+                    </div>
                 </div>
-            </div>
-        </script>
+            </script>
 
         <!-- SCRIPT -->
         <script src="https://unpkg.com/vue"></script>
         <script src="../Scripts/index.js"></script>
         <script src="../Scripts/headerDropper.js"></script>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <!-- #endregion -->
 
         <!-- MAP -->
         <script>
             mapboxgl.accessToken = 'pk.eyJ1IjoibHVjaWVuOTUwIiwiYSI6ImNrOHgycmcyeDBnM2wzZnJ6bzA3MmtlMncifQ.mPnllbNBrYFb5m3I0ZTxrw';
-            var pizzaLocation = [-75.724335, 45.284478];
-            var map = new mapboxgl.Map({
-                center: pizzaLocation,
-                zoom: 17,
+
+            // INIT MAPS
+            const centerMap = [-75.755958, 45.298498];
+            const styleAPI = 'https://api.maptiler.com/maps/ef1ce2ec-4124-4755-a912-bb054ccf9aa5/style.json?key=b57rLPWWHae8xOlg0T3k'
+            var mapLong = new mapboxgl.Map({
+                center: centerMap,
+                zoom: 10.26,
                 container: 'map',
                 pitch: 40,
-                style: 'https://api.maptiler.com/maps/ef1ce2ec-4124-4755-a912-bb054ccf9aa5/style.json?key=b57rLPWWHae8xOlg0T3k'
+                style: 'mapbox://styles/lucien950/ckfswphxu0shh19mniawlznx1'
             });
+            var mapContact = new mapboxgl.Map({
+                center: centerMap,
+                zoom: 9.5,
+                container: 'mapContact',
+                pitch: 30,
+                style: styleAPI
+            })
 
             // NAVIGATION CONTROL
-            var navCon = new mapboxgl.NavigationControl({
+            var navConLong = new mapboxgl.NavigationControl({
                 showCompass: true,
                 visualizePitch: true,
                 showZoom: false
             });
-            map.addControl(navCon, 'top-left');
+            mapLong.addControl(navConLong, 'top-left');
+
+            var navConContact = new mapboxgl.NavigationControl({
+                showCompass: true,
+                visualizePitch: true,
+                showZoom: false
+            });
+            mapContact.addControl(navConContact, 'top-left');
+
+            // MARKERS
+            // FEATURE CONSTRUCTOR
+            function feature(coordinates, name) {
+                this.type = "Feature";
+                this.geometry = {
+                    "type": "Point",
+                    "coordinates": coordinates
+                }
+                this.properties = {
+                    "name": name
+                }
+            }
+            var pizzaLocations = {
+                "type": "FeatureCollection",
+                "features": [
+                    new feature([-75.785370, 45.342420], "BASELINE"),
+                    new feature([-75.677374, 45.233987], "MANOTICK"),
+                    new feature([-75.690520, 45.428400], "DALHOUSIE"),
+                    new feature([-75.724335, 45.284478], "Woodroffe"),
+                    new feature([-75.671738, 45.383831], "BANK"),
+                    new feature([-75.733498, 45.377510 ], "MERIVALE"),
+                    new feature([-75.781950 , 45.350650], "BAXTER"),
+                    new feature([-75.690070, 45.391320], "SENECA"),
+                    new feature([-75.6863, 45.28309 ], "GLOUSTER"),
+                    new feature([-75.61752 , 45.38954], "ST.LAURENT"),
+                    new feature([-75.63015, 45.44579], ""),
+                    new feature([-75.72652, 45.33788], "WOODFIELD"),
+                    new feature([-75.88945, 45.29864], "KANATA"),
+                    new feature([-75.82948, 45.20071], "RICHMOND"),
+                    new feature([-75.91737, 45.2558], "STITTSVILLE"),
+                    new feature([-75.60941, 45.14447], "OSGOOD"),
+                    new feature([-75.51245, 45.45245], "INNES"),
+                    new feature([-75.49853, 45.47743], "TOMKINS"),
+                ]
+            };
+            pizzaLocations.features.forEach((store, i) => {
+                store.properties.id = i;
+            });
+            
+
+            pizzaLocations.features.forEach((marker)=>{
+                var el = document.createElement('div');
+                el.className = 'marker';
+                el.style.backgroundImage = 'url(../images/logo.png)';
+                el.style.backgroundSize = 'cover';
+
+                el.style.width = '35px';
+                el.style.height = '35px';
+                new mapboxgl.Marker(el)
+                    .setLngLat(marker.geometry.coordinates)
+                    .addTo(mapLong);
+            });
+            pizzaLocations.features.forEach((marker)=>{
+                var el = document.createElement('div');
+                el.className = 'marker';
+                el.style.backgroundImage = 'url(../images/logo.png)';
+                el.style.backgroundSize = 'cover';
+                el.style.width = '35px';
+                el.style.height = '35px';
+                new mapboxgl.Marker(el)
+                    .setLngLat(marker.geometry.coordinates)
+                    .addTo(mapContact);
+            })
+
+            // mapLong.on('load', function (e) {
+            //     console.log("yay")
+            //     mapLong.addLayer({
+            //         "id": "locations",
+            //         "type": "symbol",
+            //         "source": {
+            //             "type": "geojson",
+            //             "data": pizzaLocations
+            //         },
+            //         "layout": {
+            //             "icon-image": "restaurant-pizza-15",
+            //             "icon-allow-overlap": true,
+            //         }
+            //     });
+            // });
 
 
-            var pizzaMarker = new mapboxgl.Marker({
-                color: "#ca5353"
-            }).setLngLat(pizzaLocation)
-                .addTo(map)
+            // for (location in pizzaLocation) {
+            //     // MAP 1 MARKERS
+            //     new mapboxgl.Marker({
+            //         color: "#ca5353"
+            //     }).setLngLat(location).addTo(mapLong)
+            //     // MAP 2 MARKERS
+            //     new mapboxgl.Marker({
+            //         color: "#ca5353"
+            //     }).setLngLat(location).addTo(mapContact)
+            // }
         </script>
     </body>
 </html>
