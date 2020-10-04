@@ -30,7 +30,7 @@ Vue.component('order-modal', {
 
 // GET JSON FILE FOR VUE DATA
 var request = new XMLHttpRequest();
-request.open("GET", "../JSON/vueData.json", false);
+request.open("GET", "./JSON/vueData.json", false);
 request.send(null);
 var vueData = JSON.parse(request.responseText);
 
@@ -62,7 +62,7 @@ function openInNewTab(url) {
 
 //For review boxes
 var requestReview = new XMLHttpRequest();
-requestReview.open("GET", "../JSON/reviewBoxLocations.json", false);
+requestReview.open("GET", "./JSON/reviewBoxLocations.json", false);
 requestReview.send(null);
 const reviewBoxLocations = JSON.parse(requestReview.responseText);
 

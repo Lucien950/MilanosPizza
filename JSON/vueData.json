@@ -1,19 +1,19 @@
 {
     "foodItems": [
         {
-            "imageURL": "../images/slice.png",
+            "imageURL": "./images/slice.png",
             "title": "Pizza",
             "price": "$40.99",
             "description": "Some delicious pizza to eat"
         },
         {
-            "imageURL": "../images/slice.png",
+            "imageURL": "./images/slice.png",
             "title": "Other Food",
             "price": "$32.42",
             "description": "This is also very good"
         },
         {
-            "imageURL": "../images/salad.png",
+            "imageURL": "./images/salad.png",
             "title": "Vegan Menu",
             "price": "Price Varies",
             "description": "For Vegan people"
@@ -44,32 +44,32 @@
     "reviews": [
         {
             "stars": 5,
-            "imageURL": "../images/bill.jpg",
+            "imageURL": "./images/bill.jpg",
             "review": "This was a very ok pizza I really oked with it could do with more parmesean because I am a freak"
         },
         {
             "stars": 4,
-            "imageURL": "../images/bill.jpg",
+            "imageURL": "./images/bill.jpg",
             "review": "This was a very ok pizza I really oked with it could do with more parmesean because I am a freak"
         },
         {
             "stars": 5,
-            "imageURL": "../images/bill.jpg",
+            "imageURL": "./images/bill.jpg",
             "review": "This was a very ok pizza I really oked with it could do with more parmesean because I am a freak"
         },
         {
             "stars": 5,
-            "imageURL": "../images/bill.jpg",
+            "imageURL": "./images/bill.jpg",
             "review": "This was a very ok pizza I really oked with it could do with more parmesean because I am a freak"
         },
         {
             "stars": 5,
-            "imageURL": "../images/bill.jpg",
+            "imageURL": "./images/bill.jpg",
             "review": "This was a very ok pizza I really oked with it could do with more parmesean because I am a freak"
         },
         {
             "stars": 5,
-            "imageURL": "../images/bill.jpg",
+            "imageURL": "./images/bill.jpg",
             "review": "This was a very ok pizza I really oked with it could do with more parmesean because I am a freak"
         }
     ],
@@ -83,7 +83,7 @@
             "alt": "Lights"
         },
         {
-            "imageURL": "../images/test image.jpg",
+            "imageURL": "./images/test image.jpg",
             "alt": "Sunny"
         }
     ],
