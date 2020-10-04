@@ -1,18 +1,31 @@
 //==============VUE!==============
 Vue.component('food-card', {
     template: "#food-card-template",
-    props: ['image-url', 'title', 'price', 'description']
+    props: ['food-card-data'],
+    methods:{
+        openOrderModalEmit(){
+            this.$emit('open-order-modal');
+        }
+    }
 })
 Vue.component('footer-col', {
     template: "#footer-col-template"
 })
 Vue.component('social-icon', {
     template: "#social-icon-template",
-    props: ['idClass', 'url']
+    props: ['social-icon-data']
 })
 Vue.component('review-card', {
     template: "#review-card-template",
-    props: ['stars', 'image-url', 'review']
+    props: ['review-card-data']
+})
+Vue.component('order-modal', {
+    template: '#order-modal-template',
+    methods: {
+        close() {
+            this.$emit('close');
+        }
+    }
 })
 
 // GET JSON FILE FOR VUE DATA
@@ -24,7 +37,17 @@ var vueData = JSON.parse(request.responseText);
 
 mainApp = new Vue({
     el: "#app",
-    data: vueData
+    data: vueData,
+    methods: {
+        showOrderModal() {
+            this.orderModalVisible = true;
+            document.querySelector('body').id = 'modalOpen';
+        },
+        closeOrderModal() {
+            this.orderModalVisible = false;
+            document.querySelector('body').id = '';
+        }
+    }
 })
 
 
@@ -38,38 +61,11 @@ function openInNewTab(url) {
 // ==============Driver Code==============
 
 //For review boxes
-const reviewBoxLocations=[
-    {
-        style:'top-left',
-        top:'0rem',
-        left:'10rem'
-    },
-    {
-        style: 'top-left',
-        top: '17rem',
-        left: '0rem'
-    },
-    {
-        style: 'top-left',
-        top: '34rem',
-        left: '10rem'
-    },
-    {
-        style: 'top-right',
-        top: '0rem',
-        right: '10rem'
-    },
-    {
-        style: 'top-right',
-        top: '17rem',
-        right: '0rem'
-    },
-    {
-        style: 'top-right',
-        top: '34rem',
-        right: '10rem'
-    },
-]
+var requestReview = new XMLHttpRequest();
+requestReview.open("GET", "../JSON/reviewBoxLocations.json", false);
+requestReview.send(null);
+const reviewBoxLocations = JSON.parse(requestReview.responseText);
+
 const reviewBoxes = document.querySelectorAll(".reviewBox")
 reviewBoxes.forEach((review, i) => {
     if(reviewBoxLocations[i].style === 'top-left'){
@@ -78,11 +74,9 @@ reviewBoxes.forEach((review, i) => {
     } else if (reviewBoxLocations[i].style === 'top-right'){
         review.style.top = reviewBoxLocations[i].top;
         review.style.right = reviewBoxLocations[i].right;
-    }else{
-        console.log("OH Snap you fucked up")
     }
-    
 });
+
 
 // PARALAX
 const imagery = document.querySelector("#imagery");
@@ -95,3 +89,40 @@ window.addEventListener("scroll",
         passive: true
     }
 );
+
+// DONT SCROLL BUTTONS
+const orderButtons = document.querySelectorAll('#orderButton');
+orderButtons.forEach((button)=>{
+    window.setTimeout(function () {
+        button.focus({preventScroll:true});
+    }, 0);
+})
+
+
+//MODAL THINGS
+//PIZZA SIZE
+var selectedSize = 1;
+const sizeButtons = document.getElementById("sizeButtonRow").children
+function updateSize(newSize){
+    for(i = 1; i<=3; i++){
+        const button = sizeButtons[i-1]
+        if (i == newSize) {
+            button.classList.add("selectedSizeButton");
+        }
+        else {
+            button.classList.contains("selectedSizeButton") ? button.classList.remove("selectedSizeButton") : null;
+        }
+    }
+}
+updateSize(2);
+
+//PIZZA SELECTION
+var selectedItem = 1;
+const endCount = 3;
+function updateSelection(direction){
+    if(direction==="up"){
+        selectedItem !== 3 ? selectedItem++ : selectedItem = 1;
+    }else if(direction==="down"){
+        selectedItem !== 1 ? selectedItem-- : selectedItem = endCount;
+    }
+}

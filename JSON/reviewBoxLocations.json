@@ -1,0 +1,32 @@
+[
+    {
+        "style":"top-left",
+        "top":"0rem",
+        "left":"10rem"
+    },
+    {
+        "style": "top-left",
+        "top": "17rem",
+        "left": "0rem"
+    },
+    {
+        "style": "top-left",
+        "top": "34rem",
+        "left": "10rem"
+    },
+    {
+        "style": "top-right",
+        "top": "0rem",
+        "right": "10rem"
+    },
+    {
+        "style": "top-right",
+        "top": "17rem",
+        "right": "0rem"
+    },
+    {
+        "style": "top-right",
+        "top": "34rem",
+        "right": "10rem"
+    }
+]

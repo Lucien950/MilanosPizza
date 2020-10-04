@@ -1,30 +1,29 @@
-Whole Account System BS
-
-
-
-About us
-	Small paragraph
-	Google maps on the right
-
-	Our Goals
-
-
-	Pics right text left
-	Vids
-
-
+===========INFO===========
 THEIR STORY FROM WHAT I HAVE GATHERED
     Ottawa and Eastern Ontario for 40+ years
     Twitter @https://twitter.com/milanopizza1
 
 
-Order w/ Menu
+===========BY PAGE===========
+About us
+	Get the pictures linked up
+	Fix margins and paddings
+
+
+Order
+	Menu Modal
 
 Contact (form/newsletter)
-	Twitter Feed Embed
-	Email Form
+	Instagram
 
 
-Figure out https://github.com/google/brotli
-Make Headbar transparent and blurry
 Lazyload map
+
+===========GENERAL SYSTEM THINGS===========
+Figure out https://github.com/google/brotli
+Whole Account System BS
+
+MISC
+Figure out the deal with the other pages
+ID all VUEDATA Components
+Work out for all screen sizes

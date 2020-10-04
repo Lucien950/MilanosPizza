@@ -13,6 +13,25 @@ body {
     background-color: #f9f9f9;
 }
 
+#modalOpen {
+    overflow: hidden;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+.h-lots {
+    height: 88.666%;
+}
+
+.noButtonOutLine:focus {
+    outline: none;
+}
+
 /* #region ===============SCROLLBAR=============== */
 body::-webkit-scrollbar {
     width: 8px;
@@ -130,10 +149,6 @@ nav a {
 
 
 /* BUTTON THINGS */
-#orderButton:focus {
-    outline: 0;
-}
-
 #orderButton svg,
 #orderButton {
     transition: .5s cubic-bezier(0.22, 1, 0.36, 1);
@@ -262,6 +277,120 @@ nav a {
     opacity: 1;
 }
 
+/* ORDER MODAL */
+#orderModal {
+    background-color: #00000099;
+    overflow-y: hidden;
+    padding-right: 15px;
+    backdrop-filter: opacity(1.6) blur(54px);
+    width: 99.6vw;
+}
+
+#sizeButtonRow button {
+    --size: 38px;
+    min-width: var(--size);
+    min-height: var(--size);
+    border-radius: 999px;
+    border: 1px solid #757575;
+    color: #757575;
+    transition: .3s ease;
+}
+
+#sizeButtonRow button:active {
+    transform: scale(1.1);
+}
+
+#sizeButtonRow .selectedSizeButton {
+    font-weight: bold;
+    transform: scale(1.5) !important;
+    color: black;
+    border: 1px solid #ffffff00;
+    box-shadow: 0px 3px 21px -5px rgb(0 0 0 / 50%);
+}
+
+#selectionButtonBackground {
+    background-color: #ffffff5e;
+    backdrop-filter: blur(7px);
+    z-index: -1;
+}
+
+#selectionButtonRow button {
+    transition: 0.1s;
+}
+
+#selectionButtonRow button:active {
+    transform: scale(1.1);
+}
+
+#quantityRow svg {
+    stroke: #636363;
+}
+
+#herb1 {
+    top: -6rem;
+    left: -4rem;
+    width: 12rem;
+    z-index: -1;
+}
+
+#herb2 {
+    width: 14rem;
+    transform: rotate(-442deg);
+    top: -9rem;
+    right: 20rem;
+}
+
+#tomato1 {
+    width: 9rem;
+    right: -4rem;
+    top: 42%;
+}
+
+#pizzaRow img {
+    transition: .3s ease;
+    z-index: -2;
+}
+
+.orderPosition0 {
+    width: 31rem;
+    bottom: -24rem;
+    --position: -48%;
+    left: var(--position);
+    transform: translateX(calc(var(--position)*-1));
+}
+
+.orderPosition1 {
+    width: 31rem;
+    bottom: -24rem;
+    --position: -19%;
+    left: var(--position);
+    transform: translateX(calc(var(--position)*-1));
+}
+
+.orderPosition2 {
+    width: 46rem;
+    bottom: -18rem;
+    --position: 50%;
+    left: var(--position);
+    transform: translateX(calc(var(--position)*-1));
+}
+
+.orderPosition3 {
+    width: 31rem;
+    bottom: -24rem;
+    --position: 119%;
+    left: var(--position);
+    transform: translateX(calc(var(--position)*-1));
+}
+
+.orderPosition4 {
+    width: 31rem;
+    bottom: -24rem;
+    --position: 148%;
+    left: var(--position);
+    transform: translateX(calc(var(--position)*-1));
+}
+
 /* #endregion */
 
 /* #region  Contact Us  */
@@ -343,6 +472,9 @@ nav a {
 
 
 /* #region  FOOTERS */
+
+
+/* VUE FUN */
 #footer-col {}
 
 #socialList i {
@@ -350,6 +482,21 @@ nav a {
     font-size: 2.5rem;
     cursor: pointer;
     color: #e64b4b;
+}
+
+/* #endregion */
+
+
+/* #region  VUE THINGS */
+
+.modal-fade-enter,
+.modal-fade-leave-active {
+    opacity: 0;
+}
+
+.modal-fade-enter-active,
+.modal-fade-leave-active {
+    transition: opacity .2s ease
 }
 
 /* #endregion */
