@@ -3,7 +3,7 @@
     <head>
         <title>Milano's Pizzaria</title>
         <meta name="description" content="This is a very Richard Website">
-        <link rel="icon" href="../images/logo.ico">
+        <link rel="icon" href="./images/logo.ico">
 
         <!-- PEDANTIC, BUT "NECESSARY" -->
         <meta charset="utf-8">
@@ -11,9 +11,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <!-- GENERAL CSS -->
-        <link rel="stylesheet" href="../CSS/index.css">
-        <link rel="stylesheet" href="../CSS/tailwind.css">
-        <link rel="stylesheet" href="../CSS/debug.css">
+        <link rel="stylesheet" href="./CSS/index.css">
+        <link rel="stylesheet" href="./CSS/tailwind.css">
+        <link rel="stylesheet" href="./CSS/debug.css">
 
         <!-- ICONS -->
         <script src="https://kit.fontawesome.com/c5468a7a8b.js" crossorigin="anonymous" async></script>
@@ -23,12 +23,12 @@
         <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
     </head>
     <body>
-        <img src="../images/background.svg" alt="Background Styling" id="imagery" class="fixed w-full right-0"
+        <img src="./images/background.svg" alt="Background Styling" id="imagery" class="fixed w-full right-0"
             style="z-index:-1;">
         <!-- =============NAVBAR============= -->
         <nav class="grid grid-cols-5 w-full top-0 sticky py-5 px-16 z-10">
             <div id="backgroundImage" class="w-full h-full">
-                <img src="../images/headbackgorund.png" class="w-full" alt="Header Background Image">
+                <img src="./images/headbackgorund.png" class="w-full" alt="Header Background Image">
             </div>
             <!-- Logo -->
             <div class="flex flex-row items-center col-span-3">
@@ -50,7 +50,7 @@
             <!-- =============CONTENT============= -->
             <!-- HOME -->
             <div id="home" class="page mt-6">
-                <img src="../images/pizza_main.png" alt="An Image of a Pizza" class="absolute" id="pizzaMain">
+                <img src="./images/pizza_main.png" alt="An Image of a Pizza" class="absolute" id="pizzaMain">
                 <div id="mainText" class="absolute">
                     <!-- TEXT -->
                     <h1 class="text-6xl font-extrabold mb-5 leading-tight">Ottawa's Best<br>Tasting Pizza</h1>
@@ -69,7 +69,7 @@
                         </svg>
                     </button>
                 </div>
-                <img src="../images/tomatoes.png" id="tomatoes" alt="Tomatoes and Spices">
+                <img src="./images/tomatoes.png" id="tomatoes" alt="Tomatoes and Spices">
             </div>
 
             <!-- ABOUT US -->
@@ -116,7 +116,7 @@
 
 
                     <div class="col-span-3 overflow-hidden" style="height:40vh">
-                        <img src="../images/dice.png" alt="Pizza Making Process, Illustrated">
+                        <img src="./images/dice.png" alt="Pizza Making Process, Illustrated">
                     </div>
                     <div class="col-span-3">
                         <h1>How we do it</h1>
@@ -300,13 +300,13 @@
                     <!-- CENTER WHITE PART -->
                     <div class='bg-white w-11/12 h-lots center rounded-xl p-4 overflow-hidden'>
                         <!-- IMAGERY -->
-                        <img class="absolute" id="herb1" src="../images/herbs.png" alt="Decorative Herbs">
-                        <img class="absolute" id="herb2" src="../images/herbs2.png" alt="More Decorative Herbs">
-                        <img class="absolute" id="tomato1" src="../images/tomato.png" alt="A tomato">
+                        <img class="absolute" id="herb1" src="./images/herbs.png" alt="Decorative Herbs">
+                        <img class="absolute" id="herb2" src="./images/herbs2.png" alt="More Decorative Herbs">
+                        <img class="absolute" id="tomato1" src="./images/tomato.png" alt="A tomato">
                         <div id="pizzaRow">
-                            <img class="absolute orderPosition1" src="../images/pizzaOrder1.png" alt="Pizza 1">
-                            <img class="absolute orderPosition2" src="../images/pizzaOrder2.png" alt="Pizza 2">
-                            <img class="absolute orderPosition3" src="../images/pizzaOrder3.png" alt="Pizza 3">
+                            <img class="absolute orderPosition1" src="./images/pizzaOrder1.png" alt="Pizza 1">
+                            <img class="absolute orderPosition2" src="./images/pizzaOrder2.png" alt="Pizza 2">
+                            <img class="absolute orderPosition3" src="./images/pizzaOrder3.png" alt="Pizza 3">
                         </div>
 
                         <!-- CLOSE BUTTON -->
@@ -372,8 +372,8 @@
 
         <!-- SCRIPT -->
         <script src="https://unpkg.com/vue"></script>
-        <script src="../Scripts/index.js"></script>
-        <script src="../Scripts/headerDropper.js"></script>
+        <script src="./Scripts/index.js"></script>
+        <script src="./Scripts/headerDropper.js"></script>
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         <!-- #endregion -->
 
@@ -457,7 +457,7 @@
             pizzaLocations.features.forEach((marker)=>{
                 var el = document.createElement('div');
                 el.className = 'marker';
-                el.style.backgroundImage = 'url(../images/logo.png)';
+                el.style.backgroundImage = 'url(./images/logo.png)';
                 el.style.backgroundSize = 'cover';
 
                 el.style.width = '35px';
@@ -469,7 +469,7 @@
             pizzaLocations.features.forEach((marker)=>{
                 var el = document.createElement('div');
                 el.className = 'marker';
-                el.style.backgroundImage = 'url(../images/logo.png)';
+                el.style.backgroundImage = 'url(./images/logo.png)';
                 el.style.backgroundSize = 'cover';
                 el.style.width = '35px';
                 el.style.height = '35px';
