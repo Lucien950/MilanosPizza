@@ -73,7 +73,7 @@
             </div>
 
             <!-- ABOUT US -->
-            <div id="aboutUs" class="page">
+            <div id="aboutUs" class="page pt-24">
                 <div class="title">
                     About us
                 </div>
@@ -167,7 +167,7 @@
             </div>
 
             <!-- ORDER -->
-            <div id="order" class="page">
+            <div id="order" class="page py-24 px-40">
                 <div class="text-center mb-10">
                     <div class="title">
                         Order our Popular Dishes
@@ -182,7 +182,7 @@
             </div>
 
             <!-- CONTACT US -->
-            <div id="contactus" class="page pt-12">
+            <div id="contactus" class="page pt-24">
                 <div class="title">
                     Contact us
                 </div>
@@ -196,13 +196,25 @@
                 </div>
             </div>
 
+            <!-- Community Involvement -->
+            <div id="communityInvolvement" class="page pt-12">
+                <h1 class="title">Community Involvement</h1>
+                <commmunity-involvement-row v-for="communityItem in communityRowItems" :community-item="communityItem"></commmunity-involvement-row>
+            </div>
+
+            <!-- EVENTS -->
+            <div id="events">
+                <event-row v-for="eventData in eventRowItems" :event-row-data="eventData"></event-row>
+            </div>
+
             <!-- REVIEWS -->
             <div id="reviews" class="page relative pt-12">
                 <div class="title">
                     Reviews
                 </div>
-                <div class="relative">
+                <div class="relative" style="height: 83%;">
                     <review-card v-for="review in reviews" :review-card-data="review"></review-card>
+                    <img class="center" style="z-index:-1;clip-path: circle(50.0% at 50% 50%);height:65%" src="./images/pizzaToss.png" alt="Pizza Tossing Guy">
                 </div>
             </div>
 
@@ -246,8 +258,8 @@
                 </footer-col>
             </footer>
 
-            <order-modal v-show="orderModalVisible" @close="closeOrderModal"></order-modal>
-            <!-- <order-modal @close="closeOrderModal"></order-modal> -->
+            <!--<order-modal v-show="orderModalVisible" @close="closeOrderModal"></order-modal>-->
+            <!--<order-modal @close="closeOrderModal"></order-modal>-->
         </div>
 
         <!-- #region Templates -->
@@ -269,6 +281,36 @@
             </div>
         </script>
 
+        <!-- COMMUNITY INVOLVEMENT ROW -->
+        <script type="text/x-template" id="commmunity-involvement-row-template">
+            <div class="grid grid-cols-2 grid-flow-col-dense">
+                <!-- IMAGE -->
+                <div class="col-span-1" :style="[communityItem.left ? {'grid-column':1} : {'grid-column':2}]">
+                    <img :src="communityItem.imageUrl" :alt="communityItem.imageAlt">
+                </div>
+                <!-- TEXT -->
+                <div class="col-span-1" :style="[communityItem.left ? {'grid-column':2} : {'grid-column':1}]">
+                    {{communityItem.text}}
+                </div>
+            </div>
+        </script>
+
+        <!-- EVENT ROW -->
+        <script type="text/x-template" id="event-row-template">
+            
+        </script>
+        <!-- Review Card -->
+        <script type="text/x-template" id="review-card-template">
+            <div class="reviewBox bg-white absolute flex flex-col items-center w-4/12 p-4 py-6 rounded-lg shadow-xl border-gray-200 border-4">
+                <img class="avatar mb-4" :src="reviewCardData.imageURL">
+                <p class="text-center mb-2">{{ reviewCardData.review }}</p>
+                <div class="starRack">
+                    <i v-for="starNum in reviewCardData.stars" class="fas fa-star"></i>
+                    <i v-for="starNum in (5-reviewCardData.stars)" class="far fa-star"></i>
+                </div>
+            </div>
+        </script>
+
         <!-- FOOTER COL -->
         <script type="text/x-template" id="footer-col-template">
             <div id="footer-col" class="col-span-1">
@@ -278,18 +320,6 @@
         <!-- SOCIAL ICONS -->
         <script type="text/x-template" id="social-icon-template">
             <i class="fab" :onclick="`openInNewTab(socialIconData.url)`"></i>
-        </script>
-
-        <!-- Review Card -->
-        <script type="text/x-template" id="review-card-template">
-            <div class="reviewBox bg-white absolute flex flex-col items-center w-4/12 p-4 py-6 rounded-lg shadow-xl">
-                <img class="avatar mb-4" :src="reviewCardData.imageURL">
-                <p class="text-center mb-2">{{ reviewCardData.review }}</p>
-                <div class="starRack">
-                    <i v-for="starNum in reviewCardData.stars" class="fas fa-star"></i>
-                    <i v-for="starNum in (5-reviewCardData.stars)" class="far fa-star"></i>
-                </div>
-            </div>
         </script>
 
         <!-- MODAL -->
@@ -335,6 +365,7 @@
                                     <button class="noButtonOutLine" onclick="updateSize(1)">S</button>
                                     <button class="noButtonOutLine" onclick="updateSize(2)">M</button>
                                     <button class="noButtonOutLine" onclick="updateSize(3)">L</button>
+                                    <button class="noButtonOutLine" onclick="updateSize(4)">XL</button>
                                 </div>
                                 <div id="selectionButtonRow" class="flex flex-col items-center relative py-8">
                                     <div class="h-full w-1/3 absolute top-0 rounded-full" id="selectionButtonBackground"></div>
@@ -357,10 +388,9 @@
                                         <svg class="w-10 h-10" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                                     </button>
                                 </div>
-                                <p>$60.99</p>
-                                <button class="flex flex-row">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
-                                    <p>ADD</p>
+                                <button class="flex flex-row p-2">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                                    <p>Finalize Order</p>
                                 </button>
                             </div>
                         </div>
@@ -369,13 +399,13 @@
                 </div>
             </transition>
         </script>
+        <!-- #endregion -->
 
         <!-- SCRIPT -->
         <script src="https://unpkg.com/vue"></script>
         <script src="./Scripts/index.js"></script>
         <script src="./Scripts/headerDropper.js"></script>
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        <!-- #endregion -->
 
         <!-- MAP -->
         <script>

@@ -21,11 +21,20 @@ Vue.component('review-card', {
 })
 Vue.component('order-modal', {
     template: '#order-modal-template',
+    props:['type', 'orderItems'],
     methods: {
         close() {
             this.$emit('close');
         }
     }
+})
+Vue.component('commmunity-involvement-row', {
+    template:"#commmunity-involvement-row-template",
+    props: ['community-item']
+})
+Vue.component('event-row',{
+    template:'event-row-template',
+    props:['event-row-data']
 })
 
 // GET JSON FILE FOR VUE DATA
@@ -99,30 +108,32 @@ orderButtons.forEach((button)=>{
 })
 
 
-//MODAL THINGS
-//PIZZA SIZE
-var selectedSize = 1;
-const sizeButtons = document.getElementById("sizeButtonRow").children
-function updateSize(newSize){
-    for(i = 1; i<=3; i++){
-        const button = sizeButtons[i-1]
-        if (i == newSize) {
-            button.classList.add("selectedSizeButton");
-        }
-        else {
-            button.classList.contains("selectedSizeButton") ? button.classList.remove("selectedSizeButton") : null;
-        }
-    }
-}
-updateSize(2);
+// //MODAL THINGS
+// //PIZZA SIZE
+// var selectedSize = 1;
+// const sizeButtons = document.getElementById("sizeButtonRow").children
+// function updateSize(newSize){
+//     for(i = 1; i<=4; i++){
+//         const button = sizeButtons[i-1]
+//         if (i == newSize) {
+//             button.classList.add("selectedSizeButton");
+//         }
+//         else {
+//             button.classList.contains("selectedSizeButton") ? button.classList.remove("selectedSizeButton") : null;
+//         }
+//     }
+// }
+// updateSize(2);
 
-//PIZZA SELECTION
-var selectedItem = 1;
-const endCount = 3;
-function updateSelection(direction){
-    if(direction==="up"){
-        selectedItem !== 3 ? selectedItem++ : selectedItem = 1;
-    }else if(direction==="down"){
-        selectedItem !== 1 ? selectedItem-- : selectedItem = endCount;
-    }
-}
+// //PIZZA SELECTION
+// var selectedItem = 1;
+// const endCount = 3;
+// function updateSelection(direction){
+//     if(direction==="up"){
+//         selectedItem !== 3 ? selectedItem++ : selectedItem = 1;
+//     }else if(direction==="down"){
+//         selectedItem !== 1 ? selectedItem-- : selectedItem = endCount;
+//     }
+// }
+
+// EXPAND MODAL THING LATER
