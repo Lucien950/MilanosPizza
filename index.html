@@ -23,7 +23,7 @@
         <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
     </head>
     <body>
-        <img src="./images/background.svg" alt="Background Styling" id="imagery" class="fixed w-full right-0"
+        <img src="./images/background.svg" alt="Background Styling" id="imagery" class="fixed w-full"
             style="z-index:-1;">
         <!-- =============NAVBAR============= -->
         <nav class="grid grid-cols-5 w-full top-0 sticky py-5 px-16 z-10">
@@ -41,7 +41,7 @@
                 <a href="#">Home</a>
                 <a href="#aboutUs">About Us</a>
                 <a href="#order">Menu</a>
-                <a href="#contactus">Contact Us</a>
+                <a href="#contactus">Contact</a>
                 <a href="#reviews">Reviews</a>
             </div>
         </nav>
@@ -127,47 +127,11 @@
                             for other local businesses like ourselves.
                         </p>
                     </div>
-
-                    <!-- COMMUNITY INVOLVEMENT -->
-                    <div class="col-span-3 text-right">
-                        <h1>Community Invovlement</h1>
-                        <p>
-                            Like any good pizza restaurant, we have become accustomed to sponsoring many different teams and have a gallery of team
-                            photos hanging on our walls. We also have our own Chefs for Charities campaign, where we invite 12 celebrity chefs to
-                            create a pizza each month, and donate all of the proceeds to a charity of their choice. We also work closely with the
-                            Ottawa Humane Society, OPIN Concept, and the Bruyere Foundation, and have contributed to over $35,000 to local
-                            charities!
-                        </p>
-                    </div>
-                    <div class="col-span-3">
-                        <img src="" alt="Community Involvement Image">
-                    </div>
-
-                    <!-- MILANOS AT SCHOOL -->
-                    <div class="col-span-3">
-                        <img src="" alt="Schools Image">
-                    </div>
-                    <div class="col-span-3">
-                        <h1>Milano at School</h1>
-                        <p>
-                            Why ask our schools’ children to settle for less? With over 30 locations our success speaks for itself, and there's a
-                            reason so many schools, for so many years, have chosen Milanos for their students. For further inquiries, send us an
-                            email at *BLANK*
-                        </p>
-                    </div>
-                </div>
-
-                <!-- FIND OUR LOCATIONS -->
-                <div class="w-full text-center">
-                    <h1 class="text-3xl mb-3">Find our locations</h1>
-                    <p>With over 30 locations spread across the city, find which one of our restaurants is closest to you!</p>
-                    <div id="map" class="w-full left-0" style="height:65vh;position:absolute !important"></div>
-                    <div style="height:65vh"></div>
                 </div>
             </div>
 
             <!-- ORDER -->
-            <div id="order" class="page py-24 px-40">
+            <div id="order" class="page py-24 px-0">
                 <div class="text-center mb-10">
                     <div class="title">
                         Order our Popular Dishes
@@ -176,15 +140,59 @@
                         They are really good please do try them
                     </div>
                 </div>
-                <div class="grid grid-cols-3 grid-row-3 gap-10">
+                <div class="grid grid-cols-4 grid-row-3 gap-2">
                     <food-card @open-order-modal="showOrderModal" v-for="foodItem in foodItems" :food-card-data="foodItem"></food-card>
+                </div>
+            </div>
+            
+            <!-- FIND US -->
+            <div id="findUs" class="page">
+                <div class="w-full text-center mt-16">
+                    <h1 class="text-3xl mb-3">Find our locations</h1>
+                    <p>With over 30 locations spread across the city, find which one of our restaurants is closest to you!</p>
+                    <div id="map" class="w-full left-0 mt-8" style="height:65vh;position:absolute !important"></div>
+                    <div class="mt-8" style="height:65vh"></div>
+                </div>
+            </div>
+            
+            <!-- Community Involvement -->
+            <div id="communityInvolvement" class="page pt-12">
+                <h1 class="title">Community Involvement</h1>
+                <commmunity-involvement-row v-for="communityItem in communityRowItems" :community-item="communityItem"></commmunity-involvement-row>
+            </div>
+
+            <!-- EVENTS -->
+            <div id="events">
+                <h1 class="title my-8">Events</h1>
+                <event-row v-for="eventData in eventRowItems" :event-row-data="eventData"></event-row>
+            </div>
+
+            <!-- REVIEWS -->
+            <div id="reviews" class="page relative pt-12">
+                <div class="title">
+                    Reviews
+                </div>
+                <img src="" alt="Thingy">
+
+                <div class="p-4 grid grid-cols-5">
+                    <div class="col-span-2">
+                        <review-card v-for="review in reviewRow" class="relative my-4 w-full" :review-card-data="review"></review-card>
+                    </div>
+                    <div class="col-span-3">
+                        <img src="" alt="Yoop">
+                    </div>
+                </div>
+
+                <div class="relative h-screen debugBorder">
+                    <review-card class = "circleReview" v-for="review in reviews" :review-card-data="review"></review-card>
+                    <img class="center" style="z-index:-1;clip-path: circle(50.0% at 50% 50%);height:65%" src="./images/pizzaToss.png" alt="Pizza Tossing Guy">
                 </div>
             </div>
 
             <!-- CONTACT US -->
             <div id="contactus" class="page pt-24">
                 <div class="title">
-                    Contact us
+                    Contact
                 </div>
                 <div class="grid grid-cols-3 gap-2" style='height:80vh'>
                     <div class="h-full socialScroll overflow-scroll overflow-x-hidden rounded-lg">
@@ -194,28 +202,26 @@
                     <div class="h-full bg-gray-600"></div>
                     <div class="h-full bg-gray-800" id='mapContact'></div>
                 </div>
-            </div>
-
-            <!-- Community Involvement -->
-            <div id="communityInvolvement" class="page pt-12">
-                <h1 class="title">Community Involvement</h1>
-                <commmunity-involvement-row v-for="communityItem in communityRowItems" :community-item="communityItem"></commmunity-involvement-row>
-            </div>
-
-            <!-- EVENTS -->
-            <div id="events">
-                <event-row v-for="eventData in eventRowItems" :event-row-data="eventData"></event-row>
-            </div>
-
-            <!-- REVIEWS -->
-            <div id="reviews" class="page relative pt-12">
-                <div class="title">
-                    Reviews
+                
+                <!-- JOIN OUR TEAM FORM -->
+                <h1 class="title mt-8">Join our team!</h1>
+                <p class="text-center">As Milanos continues to expand quickly, we are always looking for new members of our family!</p>
+                <div id="joinTeamForm">
+                    
                 </div>
-                <div class="relative" style="height: 83%;">
-                    <review-card v-for="review in reviews" :review-card-data="review"></review-card>
-                    <img class="center" style="z-index:-1;clip-path: circle(50.0% at 50% 50%);height:65%" src="./images/pizzaToss.png" alt="Pizza Tossing Guy">
+
+                <!-- MILANOS AT SCHOOL -->
+                <h1 class="title mt-8">Milano at School</h1>
+                <div class="relative">
+                    <img class = "relative center" src="" alt="Schools Image">
                 </div>
+                <p class="text-center">
+                    Why ask our schools’ children to settle for less? With over 30 locations our success speaks for itself, and
+                    there's a
+                    reason so many schools, for so many years, have chosen Milanos for their students. For further inquiries, send
+                    us an
+                    email at *BLANK*
+                </p>
             </div>
 
             <!-- FOOTER -->
@@ -270,7 +276,7 @@
                     <img :src="foodCardData.imageURL" :alt="foodCardData.title + ' image'">
                 </div>
                 <div class = "contentBX relative pt-0 p-6 flex flex-col justify-center items-center">
-                    <h1 class="font-bold text-5xl">{{ foodCardData.title }}</h1>
+                    <h1 class="font-bold text-4xl">{{ foodCardData.title }}</h1>
                     <h2 class="font-semibold text-xl">{{ foodCardData.price }}</h2>
                     <p class="font-medium text-lg text-center">{{ foodCardData.description }}</p>
                     <button id="orderButton" @click="openOrderModalEmit" class="bg-red-700 border-white border-solid border-2 rounded-full px-22 p-14 mt-4 flex flex-row">
@@ -283,21 +289,39 @@
 
         <!-- COMMUNITY INVOLVEMENT ROW -->
         <script type="text/x-template" id="commmunity-involvement-row-template">
-            <div class="grid grid-cols-2 grid-flow-col-dense">
+            <div class="grid grid-cols-2 gap-x-4 grid-flow-col-dense p-10" style="height:75vh">
                 <!-- IMAGE -->
-                <div class="col-span-1" :style="[communityItem.left ? {'grid-column':1} : {'grid-column':2}]">
-                    <img :src="communityItem.imageUrl" :alt="communityItem.imageAlt">
+                <div class="col-span-1 overflow-hidden relative" :style="[communityItem.left ? {'grid-column':1} : {'grid-column':2}]">
+                    <button class="absolute bottom-0 left-0 flex flex-row m-4 items-stretch">
+                        <span class="bg-red-600 p-4 py-1 rounded-l-md text-2xl flex items-center">Learn More</span>
+                        <div class="h-full p-2 bg-red-800 rounded-r-md">
+                            <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </div>
+                    </button>
+                    <img class="w-full" :src="communityItem.imageUrl" :alt="communityItem.imageAlt">
                 </div>
                 <!-- TEXT -->
-                <div class="col-span-1" :style="[communityItem.left ? {'grid-column':2} : {'grid-column':1}]">
-                    {{communityItem.text}}
+                <div class="col-span-1" :style="[communityItem.left ? {'grid-column':2} : {'grid-column':1}, communityItem.left ? {'text-align':'right'} : {'text-align':'left'}]">
+                    <h2 class="text-3xl mb-4 font-semibold">{{communityItem.title}}</h2>
+                    <p class="text-lg">{{communityItem.text}}</p>
                 </div>
             </div>
         </script>
 
         <!-- EVENT ROW -->
         <script type="text/x-template" id="event-row-template">
-            
+            <div class="grid grid-cols-6">
+                <div class="col-span-2 debugBorder">
+                    <img class="w-full" :src="eventRowData.imageURL" alt="eventRowData.imageAlt">
+                </div>
+                <div class="col-span-3 debugBorder">
+                    <h1 class="text-5xl font-semibold">{{eventRowData.title}}</h1>
+                    <p class="text-lg">{{eventRowData.text}}</p>
+                </div>
+                <div class="col-span-1 debugBorder">
+                    <button class="p-4 bg-red-600" :onclick="'openInNewTab(\'' + eventRowData.buttonLink + '\')'">{{eventRowData.buttonText}}</button>
+                </div>
+            </div>
         </script>
         <!-- Review Card -->
         <script type="text/x-template" id="review-card-template">
@@ -419,7 +443,7 @@
                 zoom: 10.26,
                 container: 'map',
                 pitch: 40,
-                style: 'mapbox://styles/lucien950/ckfswphxu0shh19mniawlznx1'
+                style: styleAPI
             });
             var mapContact = new mapboxgl.Map({
                 center: centerMap,
@@ -483,7 +507,7 @@
                 store.properties.id = i;
             });
             
-
+            // FOR MAP LONG
             pizzaLocations.features.forEach((marker)=>{
                 var el = document.createElement('div');
                 el.className = 'marker';
@@ -496,6 +520,7 @@
                     .setLngLat(marker.geometry.coordinates)
                     .addTo(mapLong);
             });
+            // FOR MAP CONTACT
             pizzaLocations.features.forEach((marker)=>{
                 var el = document.createElement('div');
                 el.className = 'marker';

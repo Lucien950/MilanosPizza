@@ -204,7 +204,7 @@ nav a {
 /* #region  ORDER SELECTION */
 .foodCard {
     width: 100%;
-    height: 35rem;
+    height: 32rem;
     background-color: #cf4c4c;
     color: white;
     overflow: hidden;
@@ -442,9 +442,7 @@ nav a {
 
 
 /* #region  REVIEWS */
-#reviews {
-    height: 115vh;
-}
+#reviews {}
 
 .starRack {
     color: #f3ea6a;

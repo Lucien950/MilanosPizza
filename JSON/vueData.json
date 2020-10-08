@@ -17,19 +17,52 @@
             "title": "Vegan Menu",
             "price": "Price Varies",
             "description": "For Vegan people"
+        },
+        {
+            "imageURL": "./images/salad.png",
+            "title": "Vegan Menu",
+            "price": "Price Varies",
+            "description": "For Vegan people"
         }
     ],
     "communityRowItems": [
         {
             "left":false,
+            "title":"Thing we did",
             "text":"orem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam  idjhbdbwdkbbdjbdjkdbkjbdjkbdjbdkabdbdkabdkwadbajkdbjdbaj Bwahdbkhbadbdbawdbjabdkawbdbdkjadbadbjkadbjkdbjkdbw Bwabdhjwbdabdbdjhbdwajhbdajbdbdjbwjbawjdhwbabdbahvdh Hgavdjhawvdavdjhvdavdhjbdabdkbkwbdkhbkdbkjwhddhadsss Wasdwasdwasdwasdwasdasdjaoihiudhwahdjfgagdgakhcakss Iagdiagugdiuahgydaejaiojopjapdojapodjaopdjapojdawuygdsss",
             "imageUrl":"./images/bill.jpg",
             "imageAlt":"Bill Gates"
+        },
+        {
+            "left": true,
+            "title": "Thing we did",
+            "text": "orem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam  idjhbdbwdkbbdjbdjkdbkjbdjkbdjbdkabdbdkabdkwadbajkdbjdbaj Bwahdbkhbadbdbawdbjabdkawbdbdkjadbadbjkadbjkdbjkdbw Bwabdhjwbdabdbdjhbdwajhbdajbdbdjbwjbawjdhwbabdbahvdh Hgavdjhawvdavdjhvdavdhjbdabdkbkwbdkhbkdbkjwhddhadsss Wasdwasdwasdwasdwasdasdjaoihiudhwahdjfgagdgakhcakss Iagdiagugdiuahgydaejaiojopjapdojapodjaopdjapojdawuygdsss",
+            "imageUrl": "./images/bill.jpg",
+            "imageAlt": "Bill Gates"
+        },
+        {
+            "left": false,
+            "title": "Thing we did",
+            "text": "orem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam  idjhbdbwdkbbdjbdjkdbkjbdjkbdjbdkabdbdkabdkwadbajkdbjdbaj Bwahdbkhbadbdbawdbjabdkawbdbdkjadbadbjkadbjkdbjkdbw Bwabdhjwbdabdbdjhbdwajhbdajbdbdjbwjbawjdhwbabdbahvdh Hgavdjhawvdavdjhvdavdhjbdabdkbkwbdkhbkdbkjwhddhadsss Wasdwasdwasdwasdwasdasdjaoihiudhwahdjfgagdgakhcakss Iagdiagugdiuahgydaejaiojopjapdojapodjaopdjapojdawuygdsss",
+            "imageUrl": "./images/bill.jpg",
+            "imageAlt": "Bill Gates"
+        },
+        {
+            "left": true,
+            "title": "Thing we did",
+            "text": "orem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam  idjhbdbwdkbbdjbdjkdbkjbdjkbdjbdkabdbdkabdkwadbajkdbjdbaj Bwahdbkhbadbdbawdbjabdkawbdbdkjadbadbjkadbjkdbjkdbw Bwabdhjwbdabdbdjhbdwajhbdajbdbdjbwjbawjdhwbabdbahvdh Hgavdjhawvdavdjhvdavdhjbdabdkbkwbdkhbkdbkjwhddhadsss Wasdwasdwasdwasdwasdasdjaoihiudhwahdjfgagdgakhcakss Iagdiagugdiuahgydaejaiojopjapdojapodjaopdjapojdawuygdsss",
+            "imageUrl": "./images/bill.jpg",
+            "imageAlt": "Bill Gates"
         }
     ],
     "eventRowItems":[
         {
-            
+            "title":"Thing",
+            "imageURL":"./images/bill.jpg",
+            "imageAlt":"Bill Gates",
+            "text":"oiwejorwiej",
+            "buttonLink":"https://www.google.ca/",
+            "buttonText":"Button Text"
         }
     ],
     "socialItems": [
@@ -82,6 +115,18 @@
         },
         {
             "stars": 5,
+            "imageURL": "./images/bill.jpg",
+            "review": "This was a very ok pizza I really oked with it could do with more parmesean because I am a freak"
+        }
+    ],
+    "reviewRow": [
+        {
+            "stars": 5,
+            "imageURL": "./images/bill.jpg",
+            "review": "This was a very ok pizza I really oked with it could do with more parmesean because I am a freak"
+        },
+        {
+            "stars": 4,
             "imageURL": "./images/bill.jpg",
             "review": "This was a very ok pizza I really oked with it could do with more parmesean because I am a freak"
         }

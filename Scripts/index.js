@@ -33,7 +33,7 @@ Vue.component('commmunity-involvement-row', {
     props: ['community-item']
 })
 Vue.component('event-row',{
-    template:'event-row-template',
+    template:'#event-row-template',
     props:['event-row-data']
 })
 
@@ -75,7 +75,7 @@ requestReview.open("GET", "./JSON/reviewBoxLocations.json", false);
 requestReview.send(null);
 const reviewBoxLocations = JSON.parse(requestReview.responseText);
 
-const reviewBoxes = document.querySelectorAll(".reviewBox")
+const reviewBoxes = document.querySelectorAll(".circleReview")
 reviewBoxes.forEach((review, i) => {
     if(reviewBoxLocations[i].style === 'top-left'){
         review.style.top = reviewBoxLocations[i].top;
