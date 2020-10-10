@@ -108,7 +108,7 @@ nav {
     box-shadow: 0px 17px 42px -18px rgba(0, 0, 0, 0.75);
 }
 
-nav a {
+#linkRow a {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.705);
     font-weight: 400;
@@ -395,6 +395,7 @@ nav a {
 /* #region  Contact Us  */
 #contactus {}
 
+/* #region  TWITTER SCROLLBAR */
 .socialScroll::-webkit-scrollbar {
     width: 9px;
     height: 9px;
@@ -436,6 +437,124 @@ nav a {
 
 .socialScroll::-webkit-scrollbar-corner {
     background: transparent;
+}
+
+/* #endregion */
+
+#jobPersonal input {
+    margin-bottom: 1rem;
+    width: 60%;
+    border-radius: 0.3rem;
+    border: 2px solid #c5c5c5;
+    padding: 0.5rem;
+}
+
+#jobPersonal input:focus {
+    outline: none;
+    border-color: #df4949;
+}
+
+#jobPersonal label {
+    margin-bottom: 0.2rem;
+}
+
+
+/* RADIO BUTTONS */
+/* REAL RADIO BUTTON */
+.option input {
+    /* To hide a input button */
+    z-index: -1;
+    position: absolute;
+    opacity: 0;
+}
+
+/* OPTION CONTAINER */
+.option label {
+    position: relative;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1rem auto;
+    grid-gap: 20px;
+    width: 320px;
+    height: 62px;
+    padding: 0 20px;
+    border-radius: 6px;
+    border: 2px solid transparent;
+    background-color: transparent;
+    transition: all .15s ease-in;
+}
+
+.option label:hover {
+    border-color: #f640405e;
+    background-color: rgba(234, 97, 97, 0.068);
+}
+
+.option input:checked~label {
+    border-color: #f64040;
+    background-color: rgba(234, 97, 97, 0.16);
+}
+
+.option:not(:last-child) {
+    margin-bottom: 0.3rem;
+}
+
+.option label>span {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    border: 2px solid #454861;
+    background-image: linear-gradient(to bottom, #3B4059, #1C1E2D);
+}
+
+.option input:checked~label>span {
+    will-change: transform;
+    border: 0;
+    background-image: linear-gradient(to top right, #6E89FF, #4363EE);
+    animation: radio .4s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+}
+
+@keyframes radio {
+    0%,
+    17.5% {
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+/* RADIO BUTTON INSIDE */
+.option input:checked~label>span:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+
+/* SUBMIT BUTTON */
+#jobSubmit {
+    padding: 0.5rem;
+    background-color: #da4c4c;
+    border-radius: 0.3rem;
+    color: white;
+    width: 60%;
+    font-size: 1.5rem;
+    transition: .1s ease;
+}
+
+#jobSubmit:hover {
+    background-color: #b63737;
+}
+
+#jobSubmit:active {
+    transform: translateY(0.3rem);
 }
 
 /* #endregion */

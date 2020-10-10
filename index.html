@@ -26,7 +26,7 @@
         <img src="./images/background.svg" alt="Background Styling" id="imagery" class="fixed w-full"
             style="z-index:-1;">
         <!-- =============NAVBAR============= -->
-        <nav class="grid grid-cols-5 w-full top-0 sticky py-5 px-16 z-10">
+        <nav class="grid grid-cols-7 w-full top-0 sticky py-5 px-16 z-10">
             <div id="backgroundImage" class="w-full h-full">
                 <img src="./images/headbackgorund.png" class="w-full" alt="Header Background Image">
             </div>
@@ -37,12 +37,15 @@
                 </a>
             </div>
             <!-- LINKS -->
-            <div id="linkRow" class="flex flex-row justify-between items-center w-full col-span-2">
-                <a href="#">Home</a>
-                <a href="#aboutUs">About Us</a>
+            <div id="linkRow" class="flex flex-row justify-between items-center w-full col-span-4">
+                <a href="#home">Home</a>
+                <a href="#aboutUs">About</a>
                 <a href="#order">Menu</a>
-                <a href="#contactus">Contact</a>
+                <a href="#findUs">Locations</a>
+                <a href="#communityInvolvement">Community</a>
+                <a href="#events">Events</a>
                 <a href="#reviews">Reviews</a>
+                <a href="#contactus">Contact</a>
             </div>
         </nav>
 
@@ -162,7 +165,7 @@
             </div>
 
             <!-- EVENTS -->
-            <div id="events">
+            <div id="events" class="page">
                 <h1 class="title my-8">Events</h1>
                 <event-row v-for="eventData in eventRowItems" :event-row-data="eventData"></event-row>
             </div>
@@ -207,7 +210,46 @@
                 <h1 class="title mt-8">Join our team!</h1>
                 <p class="text-center">As Milanos continues to expand quickly, we are always looking for new members of our family!</p>
                 <div id="joinTeamForm">
-                    
+                    <form action="results.html" method="GET" class="grid grid-cols-3">
+                        <div class="col-span-1 p-4">
+                            <h1 class="text-2xl font-semibold">Personal Information</h1>
+                        </div>
+                        <div id="jobPersonal" class="col-span-2 flex flex-col p-4">
+                            <label for="jobName">Full Name</label>
+                            <input type="text" name="Name" id="jobName">
+
+                            <label for="jobEmail">Email</label>
+                            <input type="email" name="Email" id="jobEmail">
+
+                            <label for="jobPhone">Phone</label>
+                            <input type="tel" name="Phone" id="jobPhone">
+                        </div>
+                        
+                        <div class="col-span-1 p-4">
+                            <h1 class="text-2xl font-semibold">Employement Desired</h1>
+                        </div>
+                        <div id="jobEmployement" class="col-span-2 p-4 flex flex-col items-start">
+                            <div class="option">
+                                <input type="radio" name="position" id="jobShiftAssistant">
+                                <label for="jobShiftAssistant">
+                                    <span></span>
+                                    Shift Assistant
+                                </label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="position" id="jobCounterHelp">
+                                <label for="jobCounterHelp">
+                                    <span></span>
+                                    Counter Help
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-span-1"></div>
+                        <div class="col-span-2">
+                            <button type="submit" id="jobSubmit" class="noButtonOutLine">Submit</button>
+                        </div>
+                    </form>
                 </div>
 
                 <!-- MILANOS AT SCHOOL -->
@@ -235,11 +277,14 @@
                 <footer-col>
                     <h1 class="text-lg font-semibold">Pages</h1>
                     <ul>
-                        <li>Home</li>
-                        <li>Menu</li>
-                        <li>Contact Us</li>
-                        <li>Create Account</li>
-                        <li>Sign in</li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#aboutUs">About</a></li>
+                        <li><a href="#order">Menu</a></li>
+                        <li><a href="#findUs">Locations</a></li>
+                        <li><a href="#communityInvolvement">Community</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#contactus">Contact</a></li>
                     </ul>
                 </footer-col>
                 <footer-col>
