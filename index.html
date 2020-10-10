@@ -253,15 +253,13 @@
 
                 <!-- MILANOS AT SCHOOL -->
                 <h1 class="title mt-8">Milano at School</h1>
-                <div class="relative">
-                    <img class = "relative center" src="" alt="Schools Image">
+                <div class="relative flex items-center justify-center">
+                    <img class="" src="https://www.milanopizza.ca/images/potatoeimage.jpg" alt="Schools Image" style="clip-path: circle(39.1% at 50% 50%);">
                 </div>
-                <p class="text-center">
-                    Why ask our schools’ children to settle for less? With over 30 locations our success speaks for itself, and
-                    there's a
-                    reason so many schools, for so many years, have chosen Milanos for their students. For further inquiries, send
-                    us an
-                    email at *BLANK*
+                <p class="text-center mt-4">
+                    Milanos at School: Why ask our schools’ children to settle for less? With over 30 locations our success speaks for
+                    itself, and there's a reason so many schools, for so many years, have chosen Milanos for their students. For further
+                    inquiries, send us an email at corporate@milanopizza.ca
                 </p>
             </div>
 
@@ -371,8 +369,8 @@
         <script type="text/x-template" id="review-card-template">
             <div class="reviewBox bg-white absolute flex flex-col items-center w-4/12 p-4 py-6 rounded-lg shadow-xl border-gray-200 border-4">
                 <img class="avatar mb-4" :src="reviewCardData.imageURL">
-                <p class="text-center mb-2">{{ reviewCardData.review }}</p>
-                <div class="starRack">
+                <p class="text-center mb-2 text-sm">{{ reviewCardData.review }}</p>
+                <div class="starRack text-lg tracking-wider">
                     <i v-for="starNum in reviewCardData.stars" class="fas fa-star"></i>
                     <i v-for="starNum in (5-reviewCardData.stars)" class="far fa-star"></i>
                 </div>
