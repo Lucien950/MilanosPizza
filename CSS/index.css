@@ -505,21 +505,25 @@ nav {
     border-radius: 20px;
     border: 2px solid #454861;
     background-image: linear-gradient(to bottom, #3B4059, #1C1E2D);
+    transform: scale(1);
 }
 
 .option input:checked~label>span {
     will-change: transform;
+    z-index: 2;
     border: 0;
     background-image: linear-gradient(to top right, #6E89FF, #4363EE);
-    animation: radio .4s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+    animation: radio .4s cubic-bezier(0.17, 0.89, 0.32, 1.49) forwards;
 }
 
 @keyframes radio {
+
     0%,
     17.5% {
         transform: scale(0);
     }
-    100%{
+
+    100% {
         transform: scale(1);
     }
 }
@@ -560,8 +564,8 @@ nav {
 /* #endregion */
 
 
-/* #region  REVIEWS */
-#reviews {}
+/* #region  FEEDBACK */
+#feedback {}
 
 .starRack {
     color: #f3ea6a;

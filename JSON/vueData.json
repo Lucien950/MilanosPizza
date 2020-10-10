@@ -28,31 +28,35 @@
     "communityRowItems": [
         {
             "left":false,
-            "title":"Thing we did",
-            "text":"orem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam  idjhbdbwdkbbdjbdjkdbkjbdjkbdjbdkabdbdkabdkwadbajkdbjdbaj Bwahdbkhbadbdbawdbjabdkawbdbdkjadbadbjkadbjkdbjkdbw Bwabdhjwbdabdbdjhbdwajhbdajbdbdjbwjbawjdhwbabdbahvdh Hgavdjhawvdavdjhvdavdhjbdabdkbkwbdkhbkdbkjwhddhadsss Wasdwasdwasdwasdwasdasdjaoihiudhwahdjfgagdgakhcakss Iagdiagugdiuahgydaejaiojopjapdojapodjaopdjapojdawuygdsss",
-            "imageUrl":"./images/bill.jpg",
-            "imageAlt":"Bill Gates"
+            "title":"Chefs for charity",
+            "text":"12 chefs, 12 months, 12 charities. Our Chefs for Charity campaign is something invented right here in Milanos, and we are very proud of it. Each month we get a professional chef to create a pizza that we will feature on our menu, with the proceeds of those sales going to the charity of their choice!",
+            "imageUrl":"https://www.milanopizza.ca/images/12chefsforcharitylogo.png",
+            "imageAlt":"Chefs for Charity Logo",
+            "buttonLink":"https://www.milanopizza.ca/about.php"
         },
         {
             "left": true,
-            "title": "Thing we did",
-            "text": "orem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam  idjhbdbwdkbbdjbdjkdbkjbdjkbdjbdkabdbdkabdkwadbajkdbjdbaj Bwahdbkhbadbdbawdbjabdkawbdbdkjadbadbjkadbjkdbjkdbw Bwabdhjwbdabdbdjhbdwajhbdajbdbdjbwjbawjdhwbabdbahvdh Hgavdjhawvdavdjhvdavdhjbdabdkbkwbdkhbkdbkjwhddhadsss Wasdwasdwasdwasdwasdasdjaoihiudhwahdjfgagdgakhcakss Iagdiagugdiuahgydaejaiojopjapdojapodjaopdjapojdawuygdsss",
-            "imageUrl": "./images/bill.jpg",
-            "imageAlt": "Bill Gates"
+            "title": "Bruyère foundation",
+            "text": "For the past few years we at Milanos have been working closely with the Bruyere Foundation, holding many fundraisers and helping them hands on in their Bruyere care program. The Bruyere Foundation works closely with local hospitals, and its goal is to provide high quality hospital, residential, and community services.",
+            "imageUrl": "https://www.obj.ca/sites/default/files/styles/article_main/public/2018-12/Untitled%20design_0.jpg?itok=Dv3MGX4t",
+            "imageAlt": "Bruyère foundation Logo",
+            "buttonLink": "https://www.bruyere.org/en/about-bruyere"
         },
         {
             "left": false,
-            "title": "Thing we did",
-            "text": "orem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam  idjhbdbwdkbbdjbdjkdbkjbdjkbdjbdkabdbdkabdkwadbajkdbjdbaj Bwahdbkhbadbdbawdbjabdkawbdbdkjadbadbjkadbjkdbjkdbw Bwabdhjwbdabdbdjhbdwajhbdajbdbdjbwjbawjdhwbabdbahvdh Hgavdjhawvdavdjhvdavdhjbdabdkbkwbdkhbkdbkjwhddhadsss Wasdwasdwasdwasdwasdasdjaoihiudhwahdjfgagdgakhcakss Iagdiagugdiuahgydaejaiojopjapdojapodjaopdjapojdawuygdsss",
-            "imageUrl": "./images/bill.jpg",
-            "imageAlt": "Bill Gates"
+            "title": "OPIN concept",
+            "text": "We also cooperate with OPIN Concept, as we have made multiple donations to them and have catered many events to support them free of charge. They are an Ottawa based business that helps other local businesses like ourselves, build greater online presences through web management and development.",
+            "imageUrl": "https://gust-production.s3.amazonaws.com/uploads/startup/logo_image/7666/logo.png",
+            "imageAlt": "OPIN Logo",
+            "buttonLink": "https://opin.ca/"
         },
         {
             "left": true,
-            "title": "Thing we did",
-            "text": "orem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam  idjhbdbwdkbbdjbdjkdbkjbdjkbdjbdkabdbdkabdkwadbajkdbjdbaj Bwahdbkhbadbdbawdbjabdkawbdbdkjadbadbjkadbjkdbjkdbw Bwabdhjwbdabdbdjhbdwajhbdajbdbdjbwjbawjdhwbabdbahvdh Hgavdjhawvdavdjhvdavdhjbdabdkbkwbdkhbkdbkjwhddhadsss Wasdwasdwasdwasdwasdasdjaoihiudhwahdjfgagdgakhcakss Iagdiagugdiuahgydaejaiojopjapdojapodjaopdjapojdawuygdsss",
-            "imageUrl": "./images/bill.jpg",
-            "imageAlt": "Bill Gates"
+            "title": "Ottawa humane society",
+            "text": "The Ottawa Humane Society is one of Ottawa’s leading charities and works tirelessly to protect Ottawa's animals. They provide medical treatment, shelter, and care for over 8,000 homeless animals each year. Here at Milanos we support their cause, and have made multiple donations and held multiple fundraisers to help them achieve their goals.",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a3/Ottawa_Humane_Society_logo.SVG/1200px-Ottawa_Humane_Society_logo.SVG.png",
+            "imageAlt": "Ottawa Humane Society Logo",
+            "buttonLink": "https://ottawahumane.ca/?gclid=CjwKCAjwzvX7BRAeEiwAsXExo29hLzDqlIL_mLOexi3AJluktrNu2by63lnxdHJAazqn0J8S2MqIyhoC3T4QAvD_BwE"
         }
     ],
     "eventRowItems":[
@@ -133,16 +137,16 @@
     ],
     "aboutUsImages": [
         {
-            "imageURL": "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg",
-            "alt": "tree"
+            "imageURL": "https://instagram.fxds1-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/54222600_1533211076812252_2115384670345611409_n.jpg?_nc_ht=instagram.fxds1-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=LVMKrZ4-GzEAX_4oAOn&_nc_tp=24&oh=ccad80bb009b81668533389fba8efacd&oe=5FAA269B",
+            "alt": "Pizza"
         },
         {
-            "imageURL": "https://www.w3schools.com/w3css/img_lights.jpg",
-            "alt": "Lights"
+            "imageURL": "https://instagram.fxds1-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/54222600_1533211076812252_2115384670345611409_n.jpg?_nc_ht=instagram.fxds1-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=LVMKrZ4-GzEAX_4oAOn&_nc_tp=24&oh=ccad80bb009b81668533389fba8efacd&oe=5FAA269B",
+            "alt": "Pizza"
         },
         {
-            "imageURL": "./images/test image.jpg",
-            "alt": "Sunny"
+            "imageURL": "https://instagram.fxds1-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/54222600_1533211076812252_2115384670345611409_n.jpg?_nc_ht=instagram.fxds1-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=LVMKrZ4-GzEAX_4oAOn&_nc_tp=24&oh=ccad80bb009b81668533389fba8efacd&oe=5FAA269B",
+            "alt": "Pizzaa"
         }
     ],
     "orderModalVisible": false

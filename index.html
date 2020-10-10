@@ -44,7 +44,7 @@
                 <a href="#findUs">Locations</a>
                 <a href="#communityInvolvement">Community</a>
                 <a href="#events">Events</a>
-                <a href="#reviews">Reviews</a>
+                <a href="#feedback">Reviews</a>
                 <a href="#contactus">Contact</a>
             </div>
         </nav>
@@ -86,12 +86,11 @@
                     <div class="col-span-3 p-6 pl-0 text-right">
                         <h1>Who We Are</h1>
                         <p>
-                            Founded by a family bred on pizza, Milanos Pizza has been serving families in the capital region for over 40 years.
-                            However, this didn’t just happen overnight. It all started with the Kassis family‘s traditional recipes that, over the
-                            years, were passed down to ten eager siblings. Piece by piece, with the help of all the brothers and sisters, the
-                            recipes began to spread. As we began to grow, we partnered with the Tabaja Brothers, and in the blink of an eye, the
-                            first Milanos Pizza opened on Merivale Road. Since then we have reached out to all corners of the city, and are proud to
-                            represent Ottawa and its great people who have kept us busy all these years.
+                            Who we are: Milanos Pizza has been serving families in the capital region for over 40 years! It all started with the
+                            Kassis family‘s traditional recipes that, over the years, were passed down to ten eager siblings. Piece by piece, with
+                            the help of all the brothers and sisters, the recipes began to spread. As we began to grow, we partnered with the Tabaja
+                            Brothers, and in the blink of an eye, the first Milanos Pizza opened on Merivale Road. Since then we’ve reached out to
+                            all corners of the city, and are proud to represent Ottawa and its great people.
                         </p>
                     </div>
                     <div class="col-span-3 relative h-0 w-full" style="padding-bottom: 56.25%;">
@@ -112,14 +111,9 @@
                         </p>
                     </div>
 
-                    <!-- IMAGE GALLERY -->
-                    <div class="col-span-2 overflow-hidden imgGallery" v-for="image in aboutUsImages">
-                        <img class="h-full w-auto" :src="`${image.imageURL}`" :alt="`${image.alt}`">
-                    </div>
-
-
+                    <!-- HOW WE DO IT -->
                     <div class="col-span-3 overflow-hidden" style="height:40vh">
-                        <img src="./images/dice.png" alt="Pizza Making Process, Illustrated">
+                        <img class="w-full" src="https://instagram.fxds1-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/49664404_548710272301880_7023713454147047854_n.jpg?_nc_ht=instagram.fxds1-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=G6AlHkKXiesAX8DMAEK&_nc_tp=25&oh=9b0b5557fa3da121feb52e3474ad19bb&oe=5FAA4A2B" alt="Pizza Making Process, Illustrated">
                     </div>
                     <div class="col-span-3">
                         <h1>How we do it</h1>
@@ -129,6 +123,11 @@
                             Additionally, we use only locally sourced fresh ingredients to ensure our foods are delicious, and to also show support
                             for other local businesses like ourselves.
                         </p>
+                    </div>
+
+                    <!-- IMAGE GALLERY -->
+                    <div class="col-span-2 overflow-hidden imgGallery" v-for="image in aboutUsImages">
+                        <img class="w-full" :src="`${image.imageURL}`" :alt="`${image.alt}`">
                     </div>
                 </div>
             </div>
@@ -170,10 +169,10 @@
                 <event-row v-for="eventData in eventRowItems" :event-row-data="eventData"></event-row>
             </div>
 
-            <!-- REVIEWS -->
-            <div id="reviews" class="page relative pt-12">
+            <!-- Feedback -->
+            <div id="feedback" class="page relative pt-12">
                 <div class="title">
-                    Reviews
+                    Feedback
                 </div>
                 <img src="" alt="Thingy">
 
@@ -210,7 +209,7 @@
                 <h1 class="title mt-8">Join our team!</h1>
                 <p class="text-center">As Milanos continues to expand quickly, we are always looking for new members of our family!</p>
                 <div id="joinTeamForm">
-                    <form action="results.html" method="GET" class="grid grid-cols-3">
+                    <form action="results.html" method="GET" class="grid grid-cols-3 mt-3">
                         <div class="col-span-1 p-4">
                             <h1 class="text-2xl font-semibold">Personal Information</h1>
                         </div>
@@ -283,7 +282,7 @@
                         <li><a href="#findUs">Locations</a></li>
                         <li><a href="#communityInvolvement">Community</a></li>
                         <li><a href="#events">Events</a></li>
-                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#feedback">Reviews</a></li>
                         <li><a href="#contactus">Contact</a></li>
                     </ul>
                 </footer-col>
@@ -334,10 +333,10 @@
 
         <!-- COMMUNITY INVOLVEMENT ROW -->
         <script type="text/x-template" id="commmunity-involvement-row-template">
-            <div class="grid grid-cols-2 gap-x-4 grid-flow-col-dense p-10" style="height:75vh">
+            <div class="grid grid-cols-2 gap-x-4 grid-flow-col-dense p-10">
                 <!-- IMAGE -->
-                <div class="col-span-1 overflow-hidden relative" :style="[communityItem.left ? {'grid-column':1} : {'grid-column':2}]">
-                    <button class="absolute bottom-0 left-0 flex flex-row m-4 items-stretch">
+                <div class="col-span-1 relative" :style="[communityItem.left ? {'grid-column':1} : {'grid-column':2}]">
+                    <button class="absolute bottom-0 left-0 flex flex-row m-4 items-stretch" :onclick="'openInNewTab(\'' + communityItem.buttonLink + '\')'">
                         <span class="bg-red-600 p-4 py-1 rounded-l-md text-2xl flex items-center">Learn More</span>
                         <div class="h-full p-2 bg-red-800 rounded-r-md">
                             <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
