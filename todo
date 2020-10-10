@@ -1,30 +1,19 @@
-===========INFO===========
-THEIR STORY FROM WHAT I HAVE GATHERED
-    Ottawa and Eastern Ontario for 40+ years
-    Twitter @https://twitter.com/milanopizza1
-
-
-===========BY PAGE===========
-About us
-	Get the pictures linked up
-	Fix margins and paddings
-
-
-Order
-	Menu Modal
-
-Contact (form/newsletter)
-	Instagram
-	https://codepen.io/visualcookie/pen/xeBqBm
-
-
-
 ===========GENERAL SYSTEM THINGS===========
-Figure out https://github.com/google/brotli
-Whole Account System BS
-
-MISC
-Lazyload map
+-------IMPORTANT-------
+Menu Modal
+Instagram
+Sort out spacing and design with Richard
 Figure out the deal with the other pages
 ID all VUEDATA Components
+
+-------Medium-------
+Lazyload map
+Get the map features on click sorted out
+
+-------Ehhh-------
 Work out for all screen sizes
+Figure out https://github.com/google/brotli
+
+-------UNSORTED-------
+http://www.milano-ri.com/employment/application.pdf Add to the application form
+Polish up background

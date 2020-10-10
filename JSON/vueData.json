@@ -3,26 +3,30 @@
         {
             "imageURL": "./images/slice.png",
             "title": "Pizza",
-            "price": "$40.99",
-            "description": "Some delicious pizza to eat"
+            "price": "Price Varies",
+            "description": "Some delicious pizza to eat",
+            "menu": "pizza"
         },
         {
             "imageURL": "./images/slice.png",
             "title": "Other Food",
-            "price": "$32.42",
-            "description": "This is also very good"
+            "price": "Price Varies",
+            "description": "Other Quality Food",
+            "menu": "menu"
+        },
+        {
+            "imageURL": "./images/salad.png",
+            "title": "Specials",
+            "price": "Price Varies",
+            "description": "Discounts for everyone!",
+            "menu": "specials"
         },
         {
             "imageURL": "./images/salad.png",
             "title": "Vegan Menu",
             "price": "Price Varies",
-            "description": "For Vegan people"
-        },
-        {
-            "imageURL": "./images/salad.png",
-            "title": "Vegan Menu",
-            "price": "Price Varies",
-            "description": "For Vegan people"
+            "description": "For Vegan people",
+            "menu": "vegan"
         }
     ],
     "communityRowItems": [
@@ -143,12 +147,12 @@
         {
             "stars": 5,
             "imageURL": "./images/bill.jpg",
-            "review": "This was a very ok pizza I really oked with it could do with more parmesean because I am a freak"
+            "review": "Husband eats there everytime he is at the Marriott and highly recommended this eatery. And I wasn't disappointed."
         },
         {
-            "stars": 4,
+            "stars": 5,
             "imageURL": "./images/bill.jpg",
-            "review": "This was a very ok pizza I really oked with it could do with more parmesean because I am a freak"
+            "review": "The staff were incredibly friendly and helpful. The walls were filled with newspaper articles on the variety of ways they give back to the community. Great community giving, great staff and great pizza! Highly recommend."
         }
     ],
     "aboutUsImages": [
@@ -165,5 +169,6 @@
             "alt": "Pizzaa"
         }
     ],
-    "orderModalVisible": false
+    "menuModalOpen":false,
+    "menuModalType":""
 }

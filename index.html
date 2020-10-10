@@ -143,7 +143,14 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-4 grid-row-3 gap-2">
-                    <food-card @open-order-modal="showOrderModal" v-for="foodItem in foodItems" :food-card-data="foodItem"></food-card>
+                    <food-card 
+                        v-for="foodItem in foodItems" 
+                        :food-card-data="foodItem" 
+                        @open-emit-pizza="showModal('pizza')" 
+                        @open-emit-vegan="showModal('vegan')" 
+                        @open-emit-menu="showModal('menu')" 
+                        @open-emit-specials="showModal('specials')"
+                    ></food-card>
                 </div>
             </div>
             
@@ -202,7 +209,13 @@
                             href="https://twitter.com/milanopizza1?ref_src=twsrc%5Etfw">Tweets by milanopizza1</a>
                     </div>
                     <div class="h-full bg-gray-600"></div>
-                    <div class="h-full bg-gray-800" id='mapContact'></div>
+                    <div class="col-span-1 flex flex-col">
+                        <div>
+                            (613) 822-6757<br>
+                            corporate@milanopizza.ca
+                        </div>
+                        <div class="h-full bg-gray-800" id='mapContact'></div>
+                    </div>
                 </div>
                 
                 <!-- JOIN OUR TEAM FORM -->
@@ -306,8 +319,7 @@
                 </footer-col>
             </footer>
 
-            <!--<order-modal v-show="orderModalVisible" @close="closeOrderModal"></order-modal>-->
-            <!--<order-modal @close="closeOrderModal"></order-modal>-->
+            <menu-modal :type="menuModalType" v-show="menuModalOpen" @close-emit="closeModal"></menu-modal>
         </div>
 
         <!-- #region Templates -->
@@ -321,7 +333,7 @@
                     <h1 class="font-bold text-4xl">{{ foodCardData.title }}</h1>
                     <h2 class="font-semibold text-xl">{{ foodCardData.price }}</h2>
                     <p class="font-medium text-lg text-center">{{ foodCardData.description }}</p>
-                    <button id="orderButton" @click="openOrderModalEmit" class="bg-red-700 border-white border-solid border-2 rounded-full px-22 p-14 mt-4 flex flex-row">
+                    <button id="orderButton" @click="open(foodCardData.menu)" onclick="blurOrderButtons()" class="noButtonOutLine bg-red-700 border-white border-solid border-2 rounded-full px-22 p-14 mt-4 flex flex-row">
                         More Info
                         <svg class="ml-1 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </button>
@@ -387,15 +399,36 @@
         <script type="text/x-template" id="social-icon-template">
             <i class="fab" :onclick="`openInNewTab(socialIconData.url)`"></i>
         </script>
+        
+        <!-- MENU MODAL -->
+        <script type="text/x-template" id="menu-modal-template">
+            <transition name="modal-fade">
+                <!-- BACKGROUND BLACKNESS -->
+                <div class="fixed top-0 right-0 w-full h-screen bg-dark-blur z-10 flex justify-center items-center">
+                    <!-- WHITE CENTER -->
+                    <div class="w-10/12 bg-white relative rounded-lg" style="height: 90%;">
+                        <button class="absolute" style="right:0.7rem;top:0.7rem" type="button" @click="close">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M6 18L18 6M6 6l12 12"></path></svg>
+                        </button>
+                        <div class="overflow-auto w-full h-full rounded-l-lg picScroll">
+                            <img v-if="type=='pizza'" src="./images/menus/Pizza_menu.png" alt="Pizza Menu">
+                            <img v-else-if="type=='menu'" src="./images/menus/OtherFoods_Menu.png" alt="Menu">
+                            <img v-else-if="type=='specials'" src="./images/menus/Specials&Drinks.png" alt="Special Menu">
+                            <img v-else-if="type=='vegan'" src="./images/menus/Vegan_menu.png" alt="Vegan Menu">
+                        </div>
+                    </div>
+                </div>
+            </transition>
+        </script>
 
-        <!-- MODAL -->
+        <!-- Cool scrolly modal, maybe later 
         <script type="text/x-template" id="order-modal-template">
             <transition name="modal-fade">
-                <!-- BACKGROUND -->
+                <-- BACKGROUND 
                 <div id='orderModal' class="fixed h-screen top-0 left-0 z-10">
-                    <!-- CENTER WHITE PART -->
+                    <-- CENTER WHITE PART 
                     <div class='bg-white w-11/12 h-lots center rounded-xl p-4 overflow-hidden'>
-                        <!-- IMAGERY -->
+                        <-- IMAGERY 
                         <img class="absolute" id="herb1" src="./images/herbs.png" alt="Decorative Herbs">
                         <img class="absolute" id="herb2" src="./images/herbs2.png" alt="More Decorative Herbs">
                         <img class="absolute" id="tomato1" src="./images/tomato.png" alt="A tomato">
@@ -405,7 +438,7 @@
                             <img class="absolute orderPosition3" src="./images/pizzaOrder3.png" alt="Pizza 3">
                         </div>
 
-                        <!-- CLOSE BUTTON -->
+                        <-- CLOSE BUTTON 
                         <div class='relative h-10 mb-8'>
                             <button class="absolute right-0" type="button" @click="close">
                                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M6 18L18 6M6 6l12 12"></path></svg>
@@ -416,16 +449,16 @@
                         <h1 class='text-center font-bold text-5xl mb-4'>Pizzas</h1>
                         
 
-                        <!-- TEXT, BUTTONS AND BUY -->
+                        <-- TEXT, BUTTONS AND BUY 
                         <div class="grid grid-cols-5 mx-8">
-                            <!-- Left Text -->
+                            <-- Left Text 
                             <div class="col-span-2 debugBorder">
                                 <h1 class="text-3xl mb-2 font-semibold">Pepperoni Pizza</h1>
                                 <p>
                                     Pizza is a savory dish of Italian origin consisting of a usually round, flattened base of leavened wheat-based dough topped with tomatoes, cheese, and often various other ingredients (such as anchovies, mushrooms, onions, olives, pineapple, meat, etc.) which is then baked at a high temperature, traditionally in a wood-fired oven.
                                 </p>
                             </div>
-                            <!-- CENTER BUTTONS -->
+                            <-- CENTER BUTTONS 
                             <div class="col-span-1 debugBorder">
                                 <div id="sizeButtonRow" class="flex flex-row justify-around mb-8">
                                     <button class="noButtonOutLine" onclick="updateSize(1)">S</button>
@@ -443,7 +476,7 @@
                                     </button>
                                 </div>
                             </div>
-                            <!-- Right Order -->
+                            <-- Right Order 
                             <div class="col-span-2 debugBorder">
                                 <div id="quantityRow" class="flex flex-row items-center">
                                     <button class="noButtonOutLine">
@@ -465,6 +498,7 @@
                 </div>
             </transition>
         </script>
+        -->
         <!-- #endregion -->
 
         <!-- SCRIPT -->

@@ -13,7 +13,7 @@ body {
     background-color: #f9f9f9;
 }
 
-#modalOpen {
+.modalOpen {
     overflow: hidden;
 }
 
@@ -512,7 +512,7 @@ nav {
     will-change: transform;
     z-index: 2;
     border: 0;
-    background-image: linear-gradient(to top right, #6E89FF, #4363EE);
+    background-image: linear-gradient(to top right, #ff6e6e, #ee4343);
     animation: radio .4s cubic-bezier(0.17, 0.89, 0.32, 1.49) forwards;
 }
 
@@ -607,7 +607,54 @@ nav {
 /* #endregion */
 
 
-/* #region  VUE THINGS */
+/* #region  MODALS */
+.bg-dark-blur {
+    background-color: #1d1f2ca3;
+    backdrop-filter: blur(2px);
+}
+
+.picScroll::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.picScroll::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+
+.picScroll::-webkit-scrollbar-thumb {
+    background: #e1e1e1;
+    border: 14px none #ffffff;
+    border-radius: 0px;
+}
+
+.picScroll::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+
+.picScroll::-webkit-scrollbar-thumb:active {
+    background: #ededed;
+}
+
+.picScroll::-webkit-scrollbar-track {
+    background: #cf4c4c;
+    border: 0px solid #3b3b3b;
+    border-radius: 0px 12px 12px 0px;
+}
+
+.picScroll::-webkit-scrollbar-track:hover {
+    background: #ed7e7e;
+}
+
+.picScroll::-webkit-scrollbar-track:active {
+    background: #333333;
+}
+
+.picScroll::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
 
 .modal-fade-enter,
 .modal-fade-leave-active {

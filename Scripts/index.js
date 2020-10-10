@@ -2,10 +2,10 @@
 Vue.component('food-card', {
     template: "#food-card-template",
     props: ['food-card-data'],
-    methods:{
-        openOrderModalEmit(){
-            this.$emit('open-order-modal');
-        }
+    methods: {
+        open(menu) {
+            this.$emit('open-emit-' + menu);
+        },
     }
 })
 Vue.component('footer-col', {
@@ -19,15 +19,7 @@ Vue.component('review-card', {
     template: "#review-card-template",
     props: ['review-card-data']
 })
-Vue.component('order-modal', {
-    template: '#order-modal-template',
-    props:['type', 'orderItems'],
-    methods: {
-        close() {
-            this.$emit('close');
-        }
-    }
-})
+
 Vue.component('commmunity-involvement-row', {
     template:"#commmunity-involvement-row-template",
     props: ['community-item']
@@ -35,6 +27,15 @@ Vue.component('commmunity-involvement-row', {
 Vue.component('event-row',{
     template:'#event-row-template',
     props:['event-row-data']
+})
+Vue.component('menu-modal', {
+    template:'#menu-modal-template',
+    props:['type'],
+    methods: {
+        close() {
+            this.$emit('close-emit');
+        },
+    }
 })
 
 // GET JSON FILE FOR VUE DATA
@@ -47,14 +48,15 @@ var vueData = JSON.parse(request.responseText);
 mainApp = new Vue({
     el: "#app",
     data: vueData,
-    methods: {
-        showOrderModal() {
-            this.orderModalVisible = true;
-            document.querySelector('body').id = 'modalOpen';
+    methods:{
+        showModal(menu) {
+            this.menuModalType=menu;
+            this.menuModalOpen = true;
+            stopScroll();
         },
-        closeOrderModal() {
-            this.orderModalVisible = false;
-            document.querySelector('body').id = '';
+        closeModal() {
+            this.menuModalOpen = false;
+            startScroll();
         }
     }
 })
@@ -100,12 +102,18 @@ window.addEventListener("scroll",
 );
 
 // DONT SCROLL BUTTONS
-const orderButtons = document.querySelectorAll('#orderButton');
-orderButtons.forEach((button)=>{
-    window.setTimeout(function () {
-        button.focus({preventScroll:true});
-    }, 0);
-})
+function blurOrderButtons(){
+    const buttons = document.querySelectorAll("#orderButton");
+    buttons.forEach(button=>{
+        button.blur();
+    })
+}
+function stopScroll(){
+    document.querySelector("body").classList.add("modalOpen")
+}
+function startScroll(){
+    document.querySelector("body").classList.remove("modalOpen")
+}
 
 
 // //MODAL THINGS
