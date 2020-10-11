@@ -162,7 +162,6 @@ nav {
 
 /* #endregion */
 
-
 /* #region  About Us */
 
 .imgGallery {
@@ -187,7 +186,6 @@ nav {
 }
 
 /* #endregion */
-
 
 /* #region  ORDER SELECTION */
 .foodCard {
@@ -392,6 +390,40 @@ nav {
 
 /* #endregion */
 
+/* COMMUNITY */
+
+
+/* EVENTS */
+#eventRow:not(:last-child){
+    margin-bottom: 1rem;
+}
+
+/* #region  FEEDBACK */
+#feedback {}
+
+.starRack {
+    color: #f3ea6a;
+    letter-spacing: normal;
+}
+
+.avatar {
+    clip-path: circle(50.0% at 50% 50%);
+    width: 20%;
+    height: auto;
+}
+
+.reviewBox {
+    transition: .3s ease;
+    background-color: #c9c9c9;
+}
+
+.reviewBox:hover {
+    transform: scale(1.04) translateY(-5px);
+    box-shadow: 0px 33px 45px -15px #00000028;
+}
+
+/* #endregion */
+
 /* #region  Contact Us  */
 #contactus {}
 
@@ -563,34 +595,6 @@ nav {
 
 /* #endregion */
 
-
-/* #region  FEEDBACK */
-#feedback {}
-
-.starRack {
-    color: #f3ea6a;
-    letter-spacing: normal;
-}
-
-.avatar {
-    clip-path: circle(50.0% at 50% 50%);
-    width: 20%;
-    height: auto;
-}
-
-.reviewBox {
-    transition: .3s ease;
-    background-color: #c9c9c9;
-}
-
-.reviewBox:hover {
-    transform: scale(1.04) translateY(-5px);
-    box-shadow: 0px 33px 45px -15px #00000028;
-}
-
-/* #endregion */
-
-
 /* #region  FOOTERS */
 
 
@@ -605,7 +609,6 @@ nav {
 }
 
 /* #endregion */
-
 
 /* #region  MODALS */
 .bg-dark-blur {
