@@ -41,9 +41,8 @@ const headerObserver = new IntersectionObserver(
     // OPTIONS
     {
         root: null,
-        threshhold: 0,
-        rootMargin: "-49.2%"
+        threshhold: 0
     }
 );
 
-headerObserver.observe(document.querySelector("#mainText"));
+headerObserver.observe(document.querySelector("#intersector"));

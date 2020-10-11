@@ -140,13 +140,13 @@ nav {
 
 /* #region  HOME SECTION */
 #home {
-    height: 100vh;
+    height: 80vh;
     position: relative;
 }
 
 #pizzaMain {
-    right: 2rem;
-    height: 43rem;
+    right: 1rem;
+    width: 43%;
 }
 
 #mainText {
@@ -154,21 +154,9 @@ nav {
 }
 
 
-/* BUTTON THINGS */
-#orderButton svg,
-#orderButton {
-    transition: .5s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-#orderButton:hover svg {
-    transform: translate(0.2rem)
-}
-
-
 #tomatoes {
-    position: relative;
     left: -13rem;
-    bottom: -66%;
+    bottom: -36%;
     width: 36%;
 }
 
@@ -204,7 +192,7 @@ nav {
 /* #region  ORDER SELECTION */
 .foodCard {
     width: 100%;
-    height: 32rem;
+    height: 30rem;
     background-color: #cf4c4c;
     color: white;
     overflow: hidden;
@@ -276,7 +264,17 @@ nav {
     opacity: 1;
 }
 
-/* ORDER MODAL */
+/* BUTTON THINGS */
+#orderButton svg,
+#orderButton {
+    transition: .5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#orderButton:hover svg {
+    transform: translate(0.2rem)
+}
+
+/* #region  ORDER MODAL PS.DEPRICATED */
 #orderModal {
     background-color: #00000099;
     overflow-y: hidden;
@@ -392,6 +390,8 @@ nav {
 
 /* #endregion */
 
+/* #endregion */
+
 /* #region  Contact Us  */
 #contactus {}
 
@@ -423,7 +423,7 @@ nav {
 .socialScroll::-webkit-scrollbar-track {
     background: #292f33;
     border: 0px none red;
-    border-radius: 4px;
+    border-radius: 0 4px 4px 0;
     padding-right: 10px;
 }
 

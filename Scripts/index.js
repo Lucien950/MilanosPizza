@@ -115,7 +115,6 @@ function startScroll(){
     document.querySelector("body").classList.remove("modalOpen")
 }
 
-
 // //MODAL THINGS
 // //PIZZA SIZE
 // var selectedSize = 1;
