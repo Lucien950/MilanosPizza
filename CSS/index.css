@@ -164,8 +164,10 @@ nav {
 
 /* #region  About Us */
 
-.imgGallery {
-    height: 40vh;
+@media (min-width: 1024px) {
+    .imgGallery {
+        height: 40vh !important;
+    }
 }
 
 .imgGallery img {
@@ -391,10 +393,12 @@ nav {
 /* #endregion */
 
 /* COMMUNITY */
-
+#communityRow:not(:last-child) {
+    margin-bottom: 2rem;
+}
 
 /* EVENTS */
-#eventRow:not(:last-child){
+#eventRow:not(:last-child) {
     margin-bottom: 1rem;
 }
 
