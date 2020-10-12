@@ -14,36 +14,40 @@ body {
 }
 
 /* #region SCROLLBAR */
-body::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+body::-webkit-scrollbar{
+    width: 0;
 }
-
-body::-webkit-scrollbar-button {
-    width: 0px;
-    height: 0px;
+@media (min-width: 1024px){
+    body::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    
+    body::-webkit-scrollbar-button {
+        width: 0px;
+        height: 0px;
+    }
+    
+    body::-webkit-scrollbar-thumb {
+        background: white;
+    }
+    
+    body::-webkit-scrollbar-thumb:hover {
+        background: #828282;
+    }
+    
+    body::-webkit-scrollbar-thumb:active {
+        background: #404040;
+    }
+    
+    body::-webkit-scrollbar-track {
+        background: #cc5656;
+    }
+    
+    body::-webkit-scrollbar-corner {
+        background: transparent;
+    }
 }
-
-body::-webkit-scrollbar-thumb {
-    background: white;
-}
-
-body::-webkit-scrollbar-thumb:hover {
-    background: #828282;
-}
-
-body::-webkit-scrollbar-thumb:active {
-    background: #404040;
-}
-
-body::-webkit-scrollbar-track {
-    background: #cc5656;
-}
-
-body::-webkit-scrollbar-corner {
-    background: transparent;
-}
-
 /* #endregion */
 
 .modalOpen {
