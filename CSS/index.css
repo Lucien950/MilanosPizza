@@ -16,7 +16,7 @@ body {
 /* #region SCROLLBAR */
 @media (min-width: 1024px){
     body::-webkit-scrollbar {
-        width: 8px;
+        width: 50px;
         height: 8px;
     }
     
