@@ -11,40 +11,46 @@ html {
 
 body {
     background-color: #f9f9f9;
+    overflow-x: hidden
 }
 
 /* #region SCROLLBAR */
-@media (min-width: 1024px){
+@media (min-width: 1024px) {
+    body {
+        overflow-x: visible;
+    }
+
     body::-webkit-scrollbar {
         width: 50px;
         height: 8px;
     }
-    
+
     body::-webkit-scrollbar-button {
         width: 0px;
         height: 0px;
     }
-    
+
     body::-webkit-scrollbar-thumb {
         background: white;
     }
-    
+
     body::-webkit-scrollbar-thumb:hover {
         background: #828282;
     }
-    
+
     body::-webkit-scrollbar-thumb:active {
         background: #404040;
     }
-    
+
     body::-webkit-scrollbar-track {
         background: #cc5656;
     }
-    
+
     body::-webkit-scrollbar-corner {
         background: transparent;
     }
 }
+
 /* #endregion */
 
 .modalOpen {
