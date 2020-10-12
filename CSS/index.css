@@ -73,7 +73,6 @@ body::-webkit-scrollbar-corner {
 
 .page {
     width: 100%;
-    padding: 0 5rem;
 }
 
 .title {
@@ -130,6 +129,15 @@ nav {
 #navSelected {
     font-weight: 700;
     color: white !important;
+}
+
+#linkRow {
+    transition: opacity .3s ease;
+}
+
+#hamburgerMenu:checked+#linkRow {
+    display: flex !important;
+    opacity: 1;
 }
 
 /* #endregion */
@@ -584,7 +592,6 @@ nav {
     background-color: #da4c4c;
     border-radius: 0.3rem;
     color: white;
-    width: 60%;
     font-size: 1.5rem;
     transition: .1s ease;
 }

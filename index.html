@@ -26,26 +26,34 @@
         <img src="./images/background.svg" alt="Background Styling" id="imagery" class="fixed w-full"
             style="z-index:-1;">
         <!-- =============NAVBAR============= -->
-        <nav class="grid grid-cols-7 top-0 sticky py-5 px-16 z-10 w-full">
+        <nav class="grid grid-cols-2 lg:grid-cols-7 top-0 sticky py-5 px-4 lg:px-16 z-10 w-full">
             <div id="backgroundImage" class="w-full h-full">
                 <img src="./images/headbackgorund.png" class="w-full" alt="Header Background Image">
             </div>
             <!-- Logo -->
-            <div class="flex flex-row items-center col-span-3">
+            <div class="flex flex-row items-center ml-8 lg:ml-0 col-span-1 lg:col-span-3">
                 <a href="#home">
                     <img class="w-auto h-12 mr-2" src="https://order.milanopizzeria.ca/images/milano/logo.png" alt="Logo">
                 </a>
             </div>
+
+            <!-- HAMBURGER MENU -->
+            <label class="flex justify-end lg:hidden cursor-pointer" for="hamburgerMenu">
+                <svg class="w-12 mr-4" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </label>
+            <input type="checkbox" class="hidden" id="hamburgerMenu">
             <!-- LINKS -->
-            <div id="linkRow" class="flex flex-row justify-between items-center w-full col-span-4">
-                <a href="#home">Home</a>
-                <a href="#aboutUs">About</a>
-                <a href="#order">Menu</a>
-                <a href="#findUs">Locations</a>
-                <a href="#communityInvolvement">Community</a>
-                <a href="#events">Events</a>
-                <a href="#feedback">Reviews</a>
-                <a href="#contactus">Contact</a>
+            <div id="linkRow" style="top:88px;" class="opacity-0 lg:opacity-100 lg:flex hidden flex-col lg:flex-row lg:justify-between lg:items-center absolute lg:static text-center lg:text-left w-full md:col-span-4">
+                <a class="py-4 lg:py-0 bg-red-500 lg:bg-transparent" href="#home">Home</a>
+                <a class="py-4 lg:py-0 bg-red-500 lg:bg-transparent" href="#aboutUs">About</a>
+                <a class="py-4 lg:py-0 bg-red-500 lg:bg-transparent" href="#order">Menu</a>
+                <a class="py-4 lg:py-0 bg-red-500 lg:bg-transparent" href="#findUs">Locations</a>
+                <a class="py-4 lg:py-0 bg-red-500 lg:bg-transparent" href="#communityInvolvement">Community</a>
+                <a class="py-4 lg:py-0 bg-red-500 lg:bg-transparent" href="#events">Events</a>
+                <a class="py-4 lg:py-0 bg-red-500 lg:bg-transparent" href="#feedback">Reviews</a>
+                <a class="py-4 lg:py-0 bg-red-500 lg:bg-transparent" href="#contactus">Contact</a>
             </div>
         </nav>
 
@@ -53,7 +61,7 @@
             <div id="intersector"></div>
             <!-- =============CONTENT============= -->
             <!-- HOME -->
-            <div id="home" class="page flex items-center">
+            <div id="home" class="page flex items-center px-20">
                 <img src="./images/pizza_main.png" alt="An Image of a Pizza" class="absolute md:block hidden" id="pizzaMain">
                 <div id="mainText">
                     <!-- TEXT -->
@@ -77,7 +85,7 @@
             </div>
 
             <!-- ABOUT US -->
-            <div id="aboutUs" class="page pt-24 px-0 lg:px-20">
+            <div id="aboutUs" class="page pt-24 lg:px-20">
                 <div class="title">
                     About us
                 </div>
@@ -156,7 +164,7 @@
             </div>
             
             <!-- FIND US -->
-            <div id="findUs" class="page px-0 lg:px-20">
+            <div id="findUs" class="page lg:px-20">
                 <div class="w-full text-center mt-16">
                     <h1 class="text-3xl mb-3">Find our locations</h1>
                     <p>With over 30 locations spread across the city, find which one of our restaurants is closest to you!</p>
@@ -166,7 +174,7 @@
             </div>
             
             <!-- Community Involvement -->
-            <div id="communityInvolvement" class="page px-0 lg:px-20 pt-12">
+            <div id="communityInvolvement" class="page lg:px-20 pt-12">
                 <h1 class="title">Community Involvement</h1>
                 <commmunity-involvement-row
                     v-for="(communityItem, index) in communityRowItems"
@@ -176,13 +184,13 @@
             </div>
 
             <!-- EVENTS -->
-            <div id="events" class="page px-0 lg:px-20">
+            <div id="events" class="page lg:px-20">
                 <h1 class="title my-8">Events</h1>
                 <event-row v-for="(eventData, index) in eventRowItems" :event-row-data="eventData" :key="index"></event-row>
             </div>
 
             <!-- Feedback -->
-            <div id="feedback" class="page relative pt-12">
+            <div id="feedback" class="page relative pt-12 lg:px-20">
                 <div class="title">
                     Feedback
                 </div>
@@ -323,11 +331,11 @@
                 <h1 class="title mt-8">Join our team!</h1>
                 <p class="text-center">As Milanos continues to expand quickly, we are always looking for new members of our family!</p>
                 <div id="joinTeamForm">
-                    <form action="results.html" method="GET" class="grid grid-cols-3 mt-3">
-                        <div class="col-span-1 p-4">
+                    <form action="results.html" method="GET" class="grid md:grid-cols-3 mt-3">
+                        <div class="md:col-span-1 p-4">
                             <h1 class="text-2xl font-semibold">Personal Information</h1>
                         </div>
-                        <div id="jobPersonal" class="col-span-2 flex flex-col p-4">
+                        <div id="jobPersonal" class="md:col-span-2 flex flex-col p-4">
                             <label for="jobName">Full Name</label>
                             <input type="text" name="Name" id="jobName">
 
@@ -338,10 +346,10 @@
                             <input type="tel" name="Phone" id="jobPhone">
                         </div>
                         
-                        <div class="col-span-1 p-4">
+                        <div class="md:col-span-1 p-4">
                             <h1 class="text-2xl font-semibold">Employement Desired</h1>
                         </div>
-                        <div id="jobEmployement" class="col-span-2 p-4 flex flex-col items-start">
+                        <div id="jobEmployement" class="md:col-span-2 p-4 flex flex-col items-start">
                             <div class="option">
                                 <input type="radio" name="position" id="jobShiftAssistant">
                                 <label for="jobShiftAssistant">
@@ -358,9 +366,9 @@
                             </div>
                         </div>
 
-                        <div class="col-span-1"></div>
-                        <div class="col-span-2">
-                            <button type="submit" id="jobSubmit" class="noButtonOutLine">Submit</button>
+                        <div class="md:col-span-1"></div>
+                        <div class="md:col-span-2">
+                            <button type="submit" id="jobSubmit" class="noButtonOutLine w-full md:w-2/3">Submit</button>
                         </div>
                     </form>
                 </div>
