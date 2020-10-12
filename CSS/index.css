@@ -13,32 +13,7 @@ body {
     background-color: #f9f9f9;
 }
 
-.modalOpen {
-    overflow: hidden;
-}
-
-.center {
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    transform: translate(50%, -50%);
-}
-
-.fancyCenter {
-    position: absolute;
-    right: 50%;
-    transform: translateX(50%);
-}
-
-.h-lots {
-    height: 88.666%;
-}
-
-.noButtonOutLine:focus {
-    outline: none;
-}
-
-/* #region ===============SCROLLBAR=============== */
+/* #region SCROLLBAR */
 body::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -70,6 +45,31 @@ body::-webkit-scrollbar-corner {
 }
 
 /* #endregion */
+
+.modalOpen {
+    overflow: hidden;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+.fancyCenter {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.h-lots {
+    height: 88.666%;
+}
+
+.noButtonOutLine:focus {
+    outline: none;
+}
 
 .page {
     width: 100%;
@@ -487,7 +487,6 @@ nav {
 
 #jobPersonal input {
     margin-bottom: 1rem;
-    width: 60%;
     border-radius: 0.3rem;
     border: 2px solid #c5c5c5;
     padding: 0.5rem;

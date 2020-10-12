@@ -23,12 +23,13 @@
         <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
     </head>
     <body>
+        <!-- IMAGE -->
         <img src="./images/background.svg" alt="Background Styling" id="imagery" class="fixed w-full"
             style="z-index:-1;">
-        <!-- =============NAVBAR============= -->
+        <!-- NAVBAR -->
         <nav class="grid grid-cols-2 lg:grid-cols-7 top-0 sticky py-5 px-4 lg:px-16 z-10 w-full">
             <div id="backgroundImage" class="w-full h-full">
-                <img src="./images/headbackgorund.png" class="w-full" alt="Header Background Image">
+                <img src="./images/headbackgorund.png" class="w-full h-full" alt="Header Background Image">
             </div>
             <!-- Logo -->
             <div class="flex flex-row items-center ml-8 lg:ml-0 col-span-1 lg:col-span-3">
@@ -38,11 +39,13 @@
             </div>
 
             <!-- HAMBURGER MENU -->
-            <label class="flex justify-end lg:hidden cursor-pointer" for="hamburgerMenu">
-                <svg class="w-12 mr-4" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </label>
+            <div class="flex justify-end pr-4 lg:hidden">
+                <label class="justify-end cursor-pointer" for="hamburgerMenu">
+                    <svg class="w-12" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </label>
+            </div>
             <input type="checkbox" class="hidden" id="hamburgerMenu">
             <!-- LINKS -->
             <div id="linkRow" style="top:88px;" class="opacity-0 lg:opacity-100 lg:flex hidden flex-col lg:flex-row lg:justify-between lg:items-center absolute lg:static text-center lg:text-left w-full md:col-span-4">
@@ -57,17 +60,22 @@
             </div>
         </nav>
 
+        <!-- ===========MAIN APP=========== -->
         <div id="app" class="mx-8 mt-6">
             <div id="intersector"></div>
             <!-- =============CONTENT============= -->
             <!-- HOME -->
-            <div id="home" class="page flex items-center px-20">
+            <div id="home" class="page flex items-center lg:px-20">
                 <img src="./images/pizza_main.png" alt="An Image of a Pizza" class="absolute md:block hidden" id="pizzaMain">
-                <div id="mainText">
+                <div id="mainText" style="z-index:1">
                     <!-- TEXT -->
-                    <h1 class="text-6xl font-extrabold mb-5 leading-tight">Ottawa's Best<br>Tasting Pizza</h1>
+                    <h1 class="text-6xl font-extrabold mb-5 leading-tight">
+                        <span class="bg-white">Ottawa's Best</span><br>
+                        <span class="bg-white">Tasting Pizza</span>
+                    </h1>
                     <p class="ml-2 text-xl">
-                        Ottawa's Local MILANO'S PIZZA; Fresh Ingredients, Fresh Pizza!<br> - Serving Barrhaven
+                        <span class="bg-white">Ottawa's Local MILANO'S PIZZA; Fresh Ingredients, Fresh Pizza!</span><br>
+                        <span class="bg-white">- Serving Barrhaven</span>
                     </p>
                     <!-- BUTTON -->
                     <button id="orderButton"
@@ -92,7 +100,7 @@
                 <!-- CONTENT GRID -->
                 <div id='contentGrid' class="flex flex-col lg:grid lg:grid-cols-6 gap-y-10 gap-x-5">
                     <!-- WHO WE ARE + VIDEO -->
-                    <div class="lg:col-span-3 p-6 pl-0 text-right flex flex-col items-center">
+                    <div class="lg:col-span-3 p-6 pl-0 text-right flex flex-col justify-center">
                         <h1 class="block">Who We Are</h1>
                         <p>
                             Who we are: Milanos Pizza has been serving families in the capital region for over 40 years! It all started with the
@@ -123,7 +131,7 @@
                     <div class="lg:col-span-3 overflow-hidden" style="height:40vh">
                         <img class="w-full" src="https://instagram.fxds1-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/49664404_548710272301880_7023713454147047854_n.jpg?_nc_ht=instagram.fxds1-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=G6AlHkKXiesAX8DMAEK&_nc_tp=25&oh=9b0b5557fa3da121feb52e3474ad19bb&oe=5FAA4A2B" alt="Pizza Making Process, Illustrated">
                     </div>
-                    <div class="lg:col-span-3">
+                    <div class="lg:col-span-3 flex flex-col justify-center">
                         <h1>How we do it</h1>
                         <p>
                             For us to achieve our goals, it takes a team effort. All of our staff members are well trained and know the ins and outs
@@ -134,8 +142,8 @@
                     </div>
 
                     <!-- IMAGE GALLERY -->
-                    <div class="lg:col-span-2 overflow-hidden h-screen80 imgGallery" v-for="image in aboutUsImages">
-                        <img class="w-full" :src="`${image.imageURL}`" :alt="`${image.alt}`">
+                    <div class="lg:col-span-2 overflow-hidden imgGallery" v-for="image in aboutUsImages">
+                        <img class="w-full h-full" :src="`${image.imageURL}`" :alt="`${image.alt}`">
                     </div>
                 </div>
             </div>
@@ -337,13 +345,13 @@
                         </div>
                         <div id="jobPersonal" class="md:col-span-2 flex flex-col p-4">
                             <label for="jobName">Full Name</label>
-                            <input type="text" name="Name" id="jobName">
+                            <input class="w-full lg:w-2/3" type="text" name="Name" id="jobName">
 
                             <label for="jobEmail">Email</label>
-                            <input type="email" name="Email" id="jobEmail">
+                            <input class="w-full lg:w-2/3" type="email" name="Email" id="jobEmail">
 
                             <label for="jobPhone">Phone</label>
-                            <input type="tel" name="Phone" id="jobPhone">
+                            <input class="w-full lg:w-2/3" type="tel" name="Phone" id="jobPhone">
                         </div>
                         
                         <div class="md:col-span-1 p-4">
@@ -430,6 +438,7 @@
 
             <menu-modal :type="menuModalType" v-show="menuModalOpen" @close-emit="closeModal"></menu-modal>
         </div>
+
         <!-- #region Templates -->
         <!-- FOOD CARD TEMPLATE -->
         <script type="text/x-template" id="food-card-template">
@@ -606,14 +615,14 @@
         </script>
         -->
         <!-- #endregion -->
-        <!-- #region SCRIPT -->
+        <!-- #region Script -->
         <script src="https://unpkg.com/vue"></script>
         <script src="./Scripts/index.js"></script>
         <script src="./Scripts/headerDropper.js"></script>
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         <script async src="//www.instagram.com/embed.js"></script>
         <!-- #endregion -->
-        <!-- #region MAP -->
+        <!-- #region MAP Code -->
         <script>
             mapboxgl.accessToken = 'pk.eyJ1IjoibHVjaWVuOTUwIiwiYSI6ImNrOHgycmcyeDBnM2wzZnJ6bzA3MmtlMncifQ.mPnllbNBrYFb5m3I0ZTxrw';
 
