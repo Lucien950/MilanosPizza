@@ -25,9 +25,9 @@
     <body>
         <!-- IMAGE -->
         <img src="./images/background.svg" alt="Background Styling" id="imagery" class="fixed"
-            style="z-index:-1;">
+            style="z-index:-2;">
         <!-- NAVBAR -->
-        <nav class="flex flex-row justify-around lg:grid lg:grid-cols-7 top-0 sticky py-5 px-0 lg:px-16 z-10 w-full">
+        <nav class="flex flex-row justify-between lg:grid lg:grid-cols-7 top-0 sticky py-5 px-4 lg:px-16 z-10 w-full">
             <div id="backgroundImage" class="w-full h-full">
                 <img src="./images/headbackgorund.png" class="w-full h-full" alt="Header Background Image">
             </div>
@@ -55,27 +55,27 @@
                 <a class="py-4 lg:py-0 bg-red-500 lg:bg-transparent" href="#findUs">Locations</a>
                 <a class="py-4 lg:py-0 bg-red-500 lg:bg-transparent" href="#communityInvolvement">Community</a>
                 <a class="py-4 lg:py-0 bg-red-500 lg:bg-transparent" href="#events">Events</a>
-                <a class="py-4 lg:py-0 bg-red-500 lg:bg-transparent" href="#feedback">Reviews</a>
+                <a class="py-4 lg:py-0 bg-red-500 lg:bg-transparent" href="#feedback">Feedback</a>
                 <a class="py-4 lg:py-0 bg-red-500 lg:bg-transparent" href="#contactus">Contact</a>
             </div>
         </nav>
 
         <!-- ===========MAIN APP=========== -->
-        <div id="app" class="mx-1 md:mx-8 mt-6">
+        <div id="app" class="mt-6">
             <div id="intersector"></div>
             <!-- =============CONTENT============= -->
             <!-- HOME -->
-            <div id="home" class="page flex items-center lg:px-20">
+            <div id="home" class="page flex items-center lg:px-32 text-white mb-10">
                 <img src="./images/pizza_main.png" alt="An Image of a Pizza" class="absolute md:block hidden" id="pizzaMain">
                 <div id="mainText" style="z-index:1">
                     <!-- TEXT -->
                     <h1 class="text-6xl font-extrabold mb-5 leading-tight">
-                        <span class="bg-white">Ottawa's Best</span><br>
-                        <span class="bg-white">Tasting Pizza</span>
+                        Ottawa's Best<br>
+                        Tasting Pizza
                     </h1>
                     <p class="ml-2 text-xl">
-                        <span class="bg-white">Ottawa's Local MILANO'S PIZZA; Fresh Ingredients, Fresh Pizza!</span><br>
-                        <span class="bg-white">- Serving Barrhaven</span>
+                        Ottawa's Local MILANO'S PIZZA; Fresh Ingredients, Fresh Pizza!<br>
+                        - Serving Barrhaven
                     </p>
                     <!-- BUTTON -->
                     <button id="orderButton"
@@ -93,16 +93,13 @@
             </div>
 
             <!-- ABOUT US -->
-            <div id="aboutUs" class="page pt-24 lg:px-20">
-                <div class="title">
-                    About us
-                </div>
+            <div id="aboutUs" class="page lg:px-20 bg-white">
                 <!-- CONTENT GRID -->
-                <div id='contentGrid' class="flex flex-col lg:grid lg:grid-cols-6 gap-y-10 gap-x-5">
+                <div id='contentGrid' class="flex flex-col lg:grid lg:grid-cols-6 gap-x-5">
                     <!-- WHO WE ARE + VIDEO -->
-                    <div class="lg:col-span-3 p-6 pl-0 text-right flex flex-col justify-center">
-                        <h1 class="block">Who We Are</h1>
-                        <p>
+                    <div style="height:70vh" class="lg:col-span-3 p-6 pl-0 pb-8 text-right flex flex-col justify-center items-center">
+                        <h1 class="block font-bold">Who We Are</h1>
+                        <p class="font-semibold text-lg text-center">
                             Who we are: Milanos Pizza has been serving families in the capital region for over 40 years! It all started with the
                             Kassis family‘s traditional recipes that, over the years, were passed down to ten eager siblings. Piece by piece, with
                             the help of all the brothers and sisters, the recipes began to spread. As we began to grow, we partnered with the Tabaja
@@ -110,52 +107,55 @@
                             all corners of the city, and are proud to represent Ottawa and its great people.
                         </p>
                     </div>
-                    <div class="lg:col-span-3 relative h-0 w-full" style="padding-bottom: 56.25%;">
-                        <iframe class="w-full h-full absolute left-0 top-0" src="https://www.youtube.com/embed/vROKlnNGR2o" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                    <div class="lg:col-span-3 w-full flex flex-col justify-center">
+                        <div class="relative h-0 w-full" style="padding-bottom: 56.25%;">
+                            <iframe class="w-full h-full absolute left-0 top-0 rounded-xl" src="https://www.youtube.com/embed/vROKlnNGR2o" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
                     </div>
 
                     <!-- OUR GOALS -->
-                    <div class="lg:col-span-6 ">
-                        <h1 class="text-center">Our Goals</h1>
-                        <p>
-                            Here at Milanos we pride ourselves in delivering delicious food, and since the beginning have been devoted to using
-                            quality ingredients. We also strive to make food for everybody, regardless of their preference, as we have a full vegan
-                            menu and many different healthy options. At all of our locations, we aim to give the best customer experience possible,
-                            and ensure that everyone who comes into our restaurant leaves with a smile.
-                        </p>
+                    <div class="lg:col-span-6 grid grid-cols-3 gap-8" style="height:70vh">
+                        <div class="col-span-3 flex flex-col justify-end">
+                            <h1 class="text-center font-bold">Our Goals</h1>
+                            <p class="text-center font-semibold lg:px-56">
+                                Here at Milanos we pride ourselves in delivering delicious food, and since the beginning have been devoted to using
+                                quality ingredients. We also strive to make food for everybody, regardless of their preference, as we have a full vegan
+                                menu and many different healthy options. At all of our locations, we aim to give the best customer experience possible,
+                                and ensure that everyone who comes into our restaurant leaves with a smile.
+                            </p>
+                        </div>
+                        <div class="lg:col-span-1 overflow-hidden imgGallery rounded-xl" v-for="image in aboutUsImages">
+                            <img class="w-full h-full" :src="`${image.imageURL}`" :alt="`${image.alt}`">
+                        </div>
                     </div>
 
                     <!-- HOW WE DO IT -->
-                    <div class="lg:col-span-3 overflow-hidden" style="height:40vh">
-                        <img class="w-full" src="https://instagram.fxds1-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/49664404_548710272301880_7023713454147047854_n.jpg?_nc_ht=instagram.fxds1-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=G6AlHkKXiesAX8DMAEK&_nc_tp=25&oh=9b0b5557fa3da121feb52e3474ad19bb&oe=5FAA4A2B" alt="Pizza Making Process, Illustrated">
-                    </div>
-                    <div class="lg:col-span-3 flex flex-col justify-center">
-                        <h1>How we do it</h1>
-                        <p>
-                            For us to achieve our goals, it takes a team effort. All of our staff members are well trained and know the ins and outs
-                            of our philosophy, and are managed equally as well by managers who have been put through the ropes and are experienced.
-                            Additionally, we use only locally sourced fresh ingredients to ensure our foods are delicious, and to also show support
-                            for other local businesses like ourselves.
-                        </p>
-                    </div>
-
-                    <!-- IMAGE GALLERY -->
-                    <div class="lg:col-span-2 overflow-hidden imgGallery" v-for="image in aboutUsImages">
-                        <img class="w-full h-full" :src="`${image.imageURL}`" :alt="`${image.alt}`">
+                    <div class="lg:col-span-6 grid grid-cols-2 gap-x-16" style="height:86vh">
+                        <div class="flex flex-col justify-center h-full">
+                            <div class="overflow-hidden rounded-lg" style="height:65%">
+                                <img class="w-full" src="https://instagram.fxds1-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/49664404_548710272301880_7023713454147047854_n.jpg?_nc_ht=instagram.fxds1-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=G6AlHkKXiesAX8DMAEK&_nc_tp=25&oh=9b0b5557fa3da121feb52e3474ad19bb&oe=5FAA4A2B" alt="Pizza Making Process, Illustrated">
+                            </div>
+                        </div>
+                        <div class="flex flex-col justify-center text-center">
+                            <h1 class="font-bold">How we do it</h1>
+                            <p class="font-semibold">
+                                For us to achieve our goals, it takes a team effort. All of our staff members are well trained and know the ins and outs
+                                of our philosophy, and are managed equally as well by managers who have been put through the ropes and are experienced.
+                                Additionally, we use only locally sourced fresh ingredients to ensure our foods are delicious, and to also show support
+                                for other local businesses like ourselves.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- ORDER -->
-            <div id="order" class="page py-24 px-0">
+            <div id="order" class="page py-24 pb-10 px-0 text-white">
                 <div class="text-center mb-10">
                     <div class="title">
                         Order our Popular Dishes
-                    </div>
-                    <div>
-                        They are really good please do try them
                     </div>
                 </div>
                 <div class="grid grid-rows-4 sm:grid-rows-2 sm:grid-cols-2 lg:grid-rows-none lg:grid-cols-4 gap-2">
@@ -172,7 +172,7 @@
             </div>
             
             <!-- FIND US -->
-            <div id="findUs" class="page lg:px-20">
+            <div id="findUs" class="page lg:px-20 text-white mb-10">
                 <div class="w-full text-center mt-16">
                     <h1 class="text-3xl mb-3">Find our locations</h1>
                     <p>With over 30 locations spread across the city, find which one of our restaurants is closest to you!</p>
@@ -182,27 +182,35 @@
             </div>
             
             <!-- Community Involvement -->
-            <div id="communityInvolvement" class="page lg:px-20 pt-12">
-                <h1 class="title">Community Involvement</h1>
-                <commmunity-involvement-row
-                    v-for="(communityItem, index) in communityRowItems"
-                    :community-item="communityItem"
-                    :key="index"
-                ></commmunity-involvement-row>
+            <div id="communityInvolvement" class="page">
+                <div id="communityInvolvementBanner" class="banner h-screen80 flex flex-col justify-center items-center overflow-hidden relative">
+                    <h1 class="title text-white" style="z-index:1">Community Involvement</h1>
+                </div>
+                <div class='py-10 lg:px-20 bg-white'>
+                    <commmunity-involvement-row
+                        v-for="(communityItem, index) in communityRowItems"
+                        :community-item="communityItem"
+                        :key="index"
+                    ></commmunity-involvement-row>
+                </div>
             </div>
 
             <!-- EVENTS -->
-            <div id="events" class="page lg:px-20">
-                <h1 class="title my-8">Events</h1>
-                <event-row v-for="(eventData, index) in eventRowItems" :event-row-data="eventData" :key="index"></event-row>
+            <div id="events" class="page">
+                <div id="eventBanner" class="banner h-screen80 flex flex-col justify-center items-center overflow-hidden relative">
+                    <h1 class="title my-8 text-white" style="z-index:1">Events</h1>
+                </div>
+                <div class="lg:px-20 mt-8 text-white">
+                    <event-row v-for="(eventData, index) in eventRowItems" :event-row-data="eventData" :key="index"></event-row>
+                </div>
             </div>
 
             <!-- Feedback -->
             <div id="feedback" class="page relative pt-12 lg:px-20">
-                <div class="title">
+                <div class="title text-white">
                     Feedback
                 </div>
-                <p class="text-center">We know we’re not perfect, that’s why it’s important to us that you give us your honest opinion. In our 40 years of
+                <p class="text-center text-white">We know we’re not perfect, that’s why it’s important to us that you give us your honest opinion. In our 40 years of
                 business you have been giving us your feedback, and we have made it a personal goal to listen to your thoughts and
                 improve our restaurant.</p>
 
@@ -210,21 +218,29 @@
                     <div class="col-span-2 row-span-2 flex flex-col justify-around">
                         <review-card v-for="(review, index) in reviewRow" :key="index" class="my-4" style="position: relative !important;width:100%!important" :review-card-data="review"></review-card>
                     </div>
-                    <div class="col-span-3 p-4 hidden md:block">
-                        <img class="w-full" src="https://instagram.fxds1-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/66648908_118908696055127_8909821977895407595_n.jpg?_nc_ht=instagram.fxds1-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=w1mTwwoAjjgAX_U7LTn&_nc_tp=24&oh=452faa25dc016e76c1dab5d22a97978e&oe=5FAC3683" alt="Yoop">
-                    </div>
                 </div>
 
-                <div class="relative lg:h-screen debugBorder">
-                    <review-card class = "circleReview" v-for="(review, index) in reviews" :review-card-data="review" :key="index"></review-card>
-                    <img class="center hidden lg:block" style="z-index:-1;clip-path: circle(50.0% at 50% 50%);height:65%" src="./images/pizzaToss.png" alt="Pizza Tossing Guy">
+                <div class="relative debugBorder">
+                    <div class="grid grid-cols-2 grid-rows-2 gap-8">
+                        <review-card v-for="(review, index) in review1" :review-card-data="review" :key="index"></review-card>
+                    </div>
+                    <div class="flex flex-col justify-center items-center py-10">
+                        <img style="clip-path: circle(50.0% at 50% 50%);width: max-content;" src="./images/pizzaToss.png" alt="Pizza Tossing Guy">
+                    </div>
+                    <div class="grid grid-cols-2 grid-rows-2 gap-8">
+                        <review-card v-for="(review, index) in review2" :review-card-data="review" :key="index"></review-card>
+                    </div>
                 </div>
             </div>
 
             <!-- CONTACT US -->
-            <div id="contactus" class="page pt-24">
-                <div class="title">
+            <div id="contactus" class="page pt-24 bg-white">
+                <div class="title mb-0">
                     Contact
+                </div>
+                <div class="text-center mb-8">
+                    (613) 822-6757<br>
+                    corporate@milanopizza.ca
                 </div>
                 <div class="grid lg:grid-cols-3 grid-rows-3 lg:grid-rows-none gap-2 h-screen220 lg:h-screen80">
                     <!-- TWITTER -->
@@ -326,19 +342,15 @@
                             </div>
                         </blockquote>
                     </div>
-                    <div class="flex flex-col">
-                        <div>
-                            (613) 822-6757<br>
-                            corporate@milanopizza.ca
-                        </div>
+                    <div>
                         <div class="h-full bg-gray-800" id='mapContact'></div>
                     </div>
                 </div>
                 
                 <!-- JOIN OUR TEAM FORM -->
-                <h1 class="title mt-8">Join our team!</h1>
+                <h1 class="title mt-12">Join our team!</h1>
                 <p class="text-center">As Milanos continues to expand quickly, we are always looking for new members of our family!</p>
-                <div id="joinTeamForm">
+                <div id="joinTeamForm" class="mx-24">
                     <form action="results.html" method="GET" class="grid md:grid-cols-3 mt-3">
                         <div class="md:col-span-1 p-4">
                             <h1 class="text-2xl font-semibold">Personal Information</h1>
@@ -382,22 +394,22 @@
                 </div>
 
                 <!-- MILANOS AT SCHOOL -->
-                <h1 class="title mt-8">Milano at School</h1>
+                <h1 class="title mt-12">Milano at School</h1>
                 <div class="relative flex items-center justify-center">
                     <img class="" src="https://www.milanopizza.ca/images/potatoeimage.jpg" alt="Schools Image" style="clip-path: circle(39.1% at 50% 50%);">
                 </div>
-                <p class="text-center mt-4">
-                    Milanos at School: Why ask our schools’ children to settle for less? With over 30 locations our success speaks for
+                <p class="text-center mt-4" style="padding: 0 35rem;">
+                    Why ask our schools’ children to settle for less? With over 30 locations our success speaks for
                     itself, and there's a reason so many schools, for so many years, have chosen Milanos for their students. For further
                     inquiries, send us an email at corporate@milanopizza.ca
                 </p>
             </div>
 
             <!-- FOOTER -->
-            <footer class=" absolute left-0 py-8 px-8 lg:px-32 w-full text-black grid grid-row-4 lg:grid-row-auto lg:grid-cols-4 gap-4">
+            <footer class=" mt-10 absolute left-0 py-8 px-8 lg:px-32 w-full text-black grid grid-row-4 lg:grid-row-auto lg:grid-cols-4 gap-4">
                 <footer-col>
                     <img src="https://order.milanopizzeria.ca/images/milano/logo.png" style="margin: auto auto 1.5rem auto;" alt="Footer Logo">
-                    <div id="socialList" class="flex flex-row justify-around">
+                    <div id="socialList" class="flex flex-row justify-around text-white">
                         <social-icon v-for="(socialItem, index) in socialItems" :key="index" :class="socialItem.idClass" :social-icon-data="socialItem" />
                     </div>
                 </footer-col>
@@ -417,21 +429,21 @@
                 <footer-col>
                     Legal
                     <ul>
-                        <li>Privacy Policy</li>
-                        <li>Terms and Conditions</li>
-                        <li>FAQ</li>
+                        <li><a href="https://woodfield.milanopizzeria.ca/?p=privacy">Privacy Policy</a></li>
+                        <li><a href="https://woodfield.milanopizzeria.ca/?p=terms">Terms and Conditions</a></li>
+                        <li><a href="https://woodfield.milanopizzeria.ca/?p=faq">FAQ</a></li>
                     </ul>
                 </footer-col>
                 <footer-col>
                     Place your order Today
                     <div>
-                        Phone
+                        Phone: (613) 727-0900
                     </div>
                     <div>
-                        Address
+                        Address: 2 Woodfield Dr Ottawa, ON K2G 3Y3, Canada, (613) 727-0900
                     </div>
                     <div>
-                        Order Now Here...
+                        <a href="https://woodfield.milanopizzeria.ca/?p=menu">Order Now Here...</a>
                     </div>
                 </footer-col>
             </footer>
@@ -449,7 +461,6 @@
                 <div class = "contentBX relative pt-0 p-6 flex flex-col justify-center items-center">
                     <h1 class="font-bold text-4xl">{{ foodCardData.title }}</h1>
                     <h2 class="font-semibold text-xl">{{ foodCardData.price }}</h2>
-                    <p class="font-medium text-lg text-center">{{ foodCardData.description }}</p>
                     <button id="orderButton" @click="open(foodCardData.menu)" onclick="blurOrderButtons()" class="noButtonOutLine bg-red-700 border-white border-solid border-2 rounded-full px-22 p-14 mt-4 flex flex-row">
                         More Info
                         <svg class="ml-1 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -460,21 +471,21 @@
 
         <!-- COMMUNITY INVOLVEMENT ROW -->
         <script type="text/x-template" id="commmunity-involvement-row-template">
-            <div id="communityRow" class="lg:grid lg:grid-cols-2 lg:gap-x-4 lg:grid-flow-col-dense lg:p-10 flex flex-col">
+            <div id="communityRow" class="lg:grid lg:grid-cols-2 lg:gap-x-4 lg:grid-flow-col-dense lg:px-10 flex flex-col">
                 <!-- IMAGE -->
                 <div class="lg:col-span-1 relative" :style="[communityItem.left ? {'grid-column':1} : {'grid-column':2}]">
-                    <button class="absolute bottom-0 left-0 flex flex-row m-4 items-stretch" :onclick="'openInNewTab(\'' + communityItem.buttonLink + '\')'">
-                        <span class="bg-red-600 p-4 py-1 rounded-l-md text-2xl flex items-center">Learn More</span>
-                        <div class="h-full p-2 bg-red-800 rounded-r-md">
-                            <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                        </div>
-                    </button>
                     <img class="w-full" :src="communityItem.imageUrl" :alt="communityItem.imageAlt">
                 </div>
                 <!-- TEXT -->
-                <div class="lg:col-span-1 text-center" :class="[communityItem.left ? 'lg:text-right' : 'lg:text-left']" :style="[communityItem.left ? {'grid-column':2} : {'grid-column':1}]">
-                <h2 class="text-3xl mb-4 font-semibold mt-4 lg:mt-0">{{communityItem.title}}</h2>
-                <p class="text-lg">{{communityItem.text}}</p>
+                <div class="lg:col-span-1 text-center flex flex-col justify-center items-center" :class="[communityItem.left ? 'lg:text-right' : 'lg:text-left']" :style="[communityItem.left ? {'grid-column':2} : {'grid-column':1}]">
+                    <h2 class="text-3xl mb-4 font-semibold mt-4 lg:mt-0 text-center">{{communityItem.title}}</h2>
+                    <p class="text-lg text-center">{{communityItem.text}}</p>
+                    <button class="flex flex-row mt-4 items-stretch" :onclick="'openInNewTab(\'' + communityItem.buttonLink + '\')'">
+                        <span class="bg-red-600 p-4 py-1 rounded-l-md text-lg flex items-center">Learn More</span>
+                        <div class="h-full p-2 bg-red-800 rounded-r-md">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </div>
+                    </button>
                 </div>
             </div>
         </script>
@@ -482,19 +493,21 @@
         <!-- EVENT ROW -->
         <script type="text/x-template" id="event-row-template">
             <div id="eventRow" class="lg:grid lg:grid-cols-3 flex flex-col">
-                <div class="lg:col-span-1">
-                    <img class="w-full" :src="eventRowData.imageURL" alt="eventRowData.imageAlt">
+                <div class="lg:col-span-1 overflow-hidden rounded-xl" style="height:60vh">
+                    <img class="w-full" style="min-height:100%" :src="eventRowData.imageURL" alt="eventRowData.imageAlt">
                 </div>
-                <div class="lg:col-span-2 flex flex-col justify-center px-4">
-                    <h1 class="text-5xl font-semibold block mb-4">{{eventRowData.title}}</h1>
-                    <p class="text-md">{{eventRowData.text}}</p>
-                    <button class="p-4 bg-red-600 w-full lg:w-1/4 mt-6" :onclick="'openInNewTab(\'' + eventRowData.buttonLink + '\')'">{{eventRowData.buttonText}}</button>
+                <div class="lg:col-span-2 flex flex-row items-center px-4">
+                    <div class="flex-shrink mr-10">
+                        <h1 class="text-5xl font-semibold block mb-4">{{eventRowData.title}}</h1>
+                        <p class="text-md">{{eventRowData.text}}</p>
+                    </div>
+                    <button class="p-4 bg-red-600 w-full lg:w-1/4 flex-none rounded-lg" :onclick="'openInNewTab(\'' + eventRowData.buttonLink + '\')'">Find Out More...</button>
                 </div>
             </div>
         </script>
         <!-- Review Card -->
         <script type="text/x-template" id="review-card-template">
-            <div class="reviewBox bg-white static lg:absolute flex flex-col items-center w-full lg:w-4/12 p-4 py-6 mb-2 lg:mb-0 rounded-lg shadow-xl border-gray-200 border-4">
+            <div style="z-index:2" class="reviewBox bg-white flex flex-col items-center w-full p-4 py-6 mb-2 lg:mb-0 rounded-lg shadow-xl border-gray-200 border-4">
             <img class="avatar mb-4" :src="reviewCardData.imageURL">
             <p class="text-center mb-2 text-sm">{{ reviewCardData.review }}</p>
                 <div class="starRack text-lg tracking-wider">

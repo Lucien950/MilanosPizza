@@ -78,9 +78,9 @@ body {
 }
 
 .title {
+    font-weight: 100;
     text-align: center;
-    font-size: 2.25rem;
-    font-weight: 700;
+    font-size: 3rem;
     margin-bottom: 1.5rem;
 }
 
@@ -134,12 +134,31 @@ nav {
 }
 
 #linkRow {
-    transition: opacity .3s ease;
+    left: 0;
 }
 
 #hamburgerMenu:checked+#linkRow {
     display: flex !important;
-    opacity: 1;
+    animation: displayLinks .5s ease forwards !important;
+}
+
+#hamburgerMenu:not(:checked)+#linkRow {
+    animation: displayLinks .5s ease backwards;
+}
+
+@keyframes displayLinks {
+    0% {
+        opacity: 0;
+        display: hidden;
+    }
+
+    1% {
+        display: flex;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 /* #endregion */
@@ -404,12 +423,33 @@ nav {
 
 /* COMMUNITY */
 #communityRow:not(:last-child) {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
+}
+
+.banner::before {
+    content: '';
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: blur(5px) brightness(0.6);
+}
+
+#communityInvolvementBanner::before {
+    background-image: url('https://instagram.fxds1-1.fna.fbcdn.net/v/t51.2885-15/e35/94152196_245631393226484_6959623258015911368_n.jpg?_nc_ht=instagram.fxds1-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=hR88IfYAuVkAX_vk2ry&_nc_tp=18&oh=78ac9f7eed2cad820b30a2ae779be7fe&oe=5FACE770');
 }
 
 /* EVENTS */
 #eventRow:not(:last-child) {
-    margin-bottom: 1rem;
+    margin-bottom: 4rem;
+}
+
+#eventBanner::before {
+    background-image: url('https://instagram.fxds1-1.fna.fbcdn.net/v/t51.2885-15/e35/s1080x1080/69722170_170285144110647_7606364644731492078_n.jpg?_nc_ht=instagram.fxds1-1.fna.fbcdn.net&_nc_cat=103&_nc_ohc=who0iIxJRWYAX8e4QFK&_nc_tp=15&oh=b5abbca7a576a5ad68293bb1e2ef2d45&oe=5FAD9DE1');
 }
 
 /* #region  FEEDBACK */
@@ -617,7 +657,6 @@ nav {
     width: min-content;
     font-size: 2.5rem;
     cursor: pointer;
-    color: #e64b4b;
 }
 
 /* #endregion */

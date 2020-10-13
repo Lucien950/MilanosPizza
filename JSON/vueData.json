@@ -8,15 +8,15 @@
             "menu": "pizza"
         },
         {
-            "imageURL": "./images/slice.png",
+            "imageURL": "./images/poutine.png",
             "title": "Other Food",
             "price": "Price Varies",
             "description": "Other Quality Food",
             "menu": "menu"
         },
         {
-            "imageURL": "./images/salad.png",
-            "title": "Specials",
+            "imageURL": "./images/coke.png",
+            "title": "Specials & Drinks",
             "price": "Price Varies",
             "description": "Discounts for everyone!",
             "menu": "specials"
@@ -66,7 +66,7 @@
     "eventRowItems":[
         {
             "title":"Bruyère Care",
-            "imageURL":"https://instagram.fxds1-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/93973591_519783762033974_7932472594922031652_n.jpg?_nc_ht=instagram.fxds1-1.fna.fbcdn.net&_nc_cat=102&_nc_ohc=lZ_ps49fJb0AX8dPLh0&_nc_tp=25&oh=251a2cdd90e25f61554ab955539c190a&oe=5FAB9D84",
+            "imageURL":"https://instagram.fxds1-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/94318433_103012071350840_7990187114904016552_n.jpg?_nc_ht=instagram.fxds1-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=xJHaGOtCy_EAX-IxuRo&_nc_tp=25&oh=0f7ea11f490bba6a9a6b4fc59c5e2584&oe=5FAD4FC6",
             "imageAlt":"Instagram image from Bryuere",
             "text":"We have partnered with our close friends at the Bruyere foundation to create the Bruyere Care program. We deliver free pizzas to hospitals, all across the city and help make sure patients and employees don’t have to work on an empty stomach. During this pandemic we have continued this program, socially distanced of course, and have fed over 1,100 of our frontline workers!",
             "buttonLink":"https://www.bruyere.org/en/about-bruyere",
@@ -74,7 +74,7 @@
         },
         {
             "title": "Free pizza initiative",
-            "imageURL": "https://instagram.fxds1-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/101651902_2991319574295602_6817310721635190392_n.jpg?_nc_ht=instagram.fxds1-1.fna.fbcdn.net&_nc_cat=102&_nc_ohc=UkZvkaQVJI4AX_nLpFg&_nc_tp=24&oh=51edce4e3cfb067bcea6d22e112892c8&oe=5FAA86A6",
+            "imageURL": "https://instagram.fxds1-1.fna.fbcdn.net/v/t51.2885-15/e35/s1080x1080/102978883_608967826640555_8682708812607332093_n.jpg?_nc_ht=instagram.fxds1-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=G-NFBbMy0aYAX-ZJvOL&_nc_tp=15&oh=1da57844369bbdd6602e1c607f19fa8e&oe=5FAF6E66",
             "imageAlt": "Collage by Milanos Pizza Instagram",
             "text": "During these hard times we think it's important for local businesses to show hospitality, as we’re all in this together. At Milanos, we created our free pizza initiative, where we would donate free pizzas across the city to various local businesses. So far we’ve donated to places like Casselman Tirecraft, Dollarama, McDonalds, and many more!",
             "buttonLink": "https://www.milanopizza.ca/about.php",
@@ -82,7 +82,7 @@
         },
         {
             "title": "Ottawa Flood Relief",
-            "imageURL": "https://instagram.fxds1-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/67873953_1689139641219756_9152928490666497225_n.jpg?_nc_ht=instagram.fxds1-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=qpkWkRo1_wEAX_KLkbb&_nc_tp=24&oh=a3e0e8ddb755ae30ab42e3ea8c86f5f0&oe=5FAB7214",
+            "imageURL": "https://instagram.fxds1-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/69320658_146018010073460_9170538334389040640_n.jpg?_nc_ht=instagram.fxds1-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=_A891uSCVZQAX8qnzTl&_nc_tp=24&oh=caff254c15314d25d74692baf004b295&oe=5FAEECF8",
             "imageAlt": "Soliders in Collage delivering Milano's Pizza",
             "text": "Because of the Ottawa flood, we thought it would be nice to help our brothers and sisters at the Canadian Armed Forces, who graciously sent over troops to help with flood relief. We served over 100 troops, and made sure they were eating good after a hard day's work! We salute our military and will always do anything to help!",
             "buttonLink": "https://ottawacitizen.com/news/local-news/canadian-military-has-2000-personnel-dealing-with-floods-but-provinces-determine-priorities",
@@ -111,7 +111,7 @@
             "url": "https://www.yelp.ca/biz/milano-pizzeria-nepean"
         }
     ],
-    "reviews": [
+    "review1": [
         {
             "stars": 5,
             "imageURL": "./images/bill.jpg",
@@ -131,7 +131,9 @@
             "stars": 5,
             "imageURL": "./images/bill.jpg",
             "review": "The Cheese Pizza is great, delivery time was great and the crust is thick and tasty. Would 100% recommend this place"
-        },
+        }
+    ],
+    "review2": [
         {
             "stars": 5,
             "imageURL": "./images/bill.jpg",
@@ -141,9 +143,7 @@
             "stars": 5,
             "imageURL": "./images/bill.jpg",
             "review": "We were at the Byward Market and everything was very busy. We found this place away from the crowd to have a quiet lunch. The cheese pizza was awesome."
-        }
-    ],
-    "reviewRow": [
+        },
         {
             "stars": 5,
             "imageURL": "./images/bill.jpg",

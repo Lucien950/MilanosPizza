@@ -90,16 +90,16 @@ reviewBoxes.forEach((review, i) => {
 
 
 // PARALAX
-const imagery = document.querySelector("#imagery");
-window.addEventListener("scroll",
-    ()=>{
-        imagery.style.top = (scrollY/-3)+"px";
-    },
-    {
-        capture: true,
-        passive: true
-    }
-);
+// const imagery = document.querySelector("#imagery");
+// window.addEventListener("scroll",
+//     ()=>{
+//         imagery.style.top = (scrollY/-3)+"px";
+//     },
+//     {
+//         capture: true,
+//         passive: true
+//     }
+// );
 
 // DONT SCROLL BUTTONS
 function blurOrderButtons(){
