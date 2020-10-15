@@ -114,44 +114,44 @@
     "review1": [
         {
             "stars": 5,
-            "imageURL": "./images/bill.jpg",
+            "imageURL": "https://media-cdn.tripadvisor.com/media/photo-l/1a/f6/e4/ca/default-avatar-2020-51.jpg",
             "review": "I had their combo deal which came to $7.10. It included pop, chips and a slice of pizza itself. You have the option of any pop, chips and pizza. Pop was also a bottle."
         },
         {
             "stars": 5,
-            "imageURL": "./images/bill.jpg",
+            "imageURL": "https://media-cdn.tripadvisor.com/media/photo-o/06/cc/1b/ee/paranoid56.jpg",
             "review": "Nice small quaint pizza place. Super good good. Cheap too. So many choices and great selection of other items too"
         },
         {
             "stars": 5,
-            "imageURL": "./images/bill.jpg",
+            "imageURL": "https://media-cdn.tripadvisor.com/media/photo-l/1a/f6/f2/11/default-avatar-2020-23.jpg",
             "review": "This pizza was just amazingly good. The crust is perfect and the pizza loaded with toppings. Be sure to try it the next time you are in downtown Ottawa."
         },
         {
             "stars": 5,
-            "imageURL": "./images/bill.jpg",
+            "imageURL": "https://media-cdn.tripadvisor.com/media/photo-l/1a/f6/f0/48/default-avatar-2020-15.jpg",
             "review": "The Cheese Pizza is great, delivery time was great and the crust is thick and tasty. Would 100% recommend this place"
         }
     ],
     "review2": [
         {
             "stars": 5,
-            "imageURL": "./images/bill.jpg",
+            "imageURL": "https://media-cdn.tripadvisor.com/media/photo-l/03/2f/d2/f5/roger-d.jpg",
             "review": "We ordered 3 large pizzas-each different and they were wonderful. One was the Milano, another was a meat lover and the 3rd was with no meat. Lots of cheese and great pizza dough"
         },
         {
             "stars": 5,
-            "imageURL": "./images/bill.jpg",
+            "imageURL": "https://media-cdn.tripadvisor.com/media/photo-l/1a/f6/e2/4a/default-avatar-2020-42.jpg",
             "review": "We were at the Byward Market and everything was very busy. We found this place away from the crowd to have a quiet lunch. The cheese pizza was awesome."
         },
         {
             "stars": 5,
-            "imageURL": "./images/bill.jpg",
+            "imageURL": "https://media-cdn.tripadvisor.com/media/photo-l/1a/f6/e2/11/default-avatar-2020-41.jpg",
             "review": "Husband eats there everytime he is at the Marriott and highly recommended this eatery. And I wasn't disappointed."
         },
         {
             "stars": 5,
-            "imageURL": "./images/bill.jpg",
+            "imageURL": "https://media-cdn.tripadvisor.com/media/photo-f/02/b8/c8/b2/patate87.jpg",
             "review": "The staff were incredibly friendly and helpful. The walls were filled with newspaper articles on the variety of ways they give back to the community. Great community giving, great staff and great pizza! Highly recommend."
         }
     ],
