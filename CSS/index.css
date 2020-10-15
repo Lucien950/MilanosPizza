@@ -18,6 +18,12 @@ body {
     background: rgba(240, 73, 73, 0.555);
 }
 
+hr {
+    border-top-width: 3px !important;
+    border-color: #ed1c24;
+    width: 10rem;
+}
+
 /* #region SCROLLBAR */
 @media (min-width: 1024px) {
     body::-webkit-scrollbar {
@@ -87,6 +93,19 @@ body {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 1.5rem;
+}
+
+.banner::before {
+    content: '';
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: blur(5px) brightness(0.6);
 }
 
 
@@ -218,7 +237,15 @@ nav {
 
 #contentGrid h1 {
     font-size: 1.875rem;
-    margin-bottom: 1.25rem;
+    margin-bottom: 0.35rem;
+}
+
+#aboutBanner::before {
+    background-image: url("https://instagram.fxds1-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/81259306_2235726196527943_3067982922813208002_n.jpg?_nc_ht=instagram.fxds1-1.fna.fbcdn.net&_nc_cat=107&_nc_ohc=ZwsPFpNnWYMAX9feirA&_nc_tp=24&oh=566405b87814cf9c2cc47ac0df7471fa&oe=5FB111AB")
+}
+
+#goalBanner::before {
+    background-image: url("https://instagram.fxds1-1.fna.fbcdn.net/v/t51.2885-15/e35/47138372_753876424973914_4169961371797387309_n.jpg?_nc_ht=instagram.fxds1-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=qiwSYCw-DJkAX-e--W7&_nc_tp=18&oh=420088402e94f1fffa5ddc0e997fb13a&oe=5FAF349B");
 }
 
 /* #endregion */
@@ -429,19 +456,6 @@ nav {
 /* COMMUNITY */
 #communityRow:not(:last-child) {
     margin-bottom: 4rem;
-}
-
-.banner::before {
-    content: '';
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    filter: blur(5px) brightness(0.6);
 }
 
 #communityInvolvementBanner::before {
